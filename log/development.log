@@ -32960,3 +32960,1328 @@ Curl::Err::HttpError (getaddrinfo: Name or service not known):
   Rendered /home/AM/.rvm/gems/ruby-2.0.0-p598/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
   Rendered /home/AM/.rvm/gems/ruby-2.0.0-p598/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
   Rendered /home/AM/.rvm/gems/ruby-2.0.0-p598/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (21.3ms)
+  [1m[36m (61.4ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (36.2ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations`  ON `schema_migrations` (`version`) 
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateNegativeWords (20150408065926)
+  [1m[35m (16.2ms)[0m  CREATE TABLE `negative_words` (`id` int(11) auto_increment PRIMARY KEY, `title` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (2.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20150408065926')
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreatePositiveWords (20150408075206)
+  [1m[35m (10.5ms)[0m  CREATE TABLE `positive_words` (`id` int(11) auto_increment PRIMARY KEY, `title` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (0.7ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20150408075206')
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+
+
+Started GET "/" for 127.0.0.1 at 2016-06-06 15:59:21 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (13.5ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/railties-4.1.5/lib/rails/templates/rails/welcome/index.html.erb (7.4ms)
+Completed 200 OK in 71ms (Views: 48.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/automatedmetareview" for 127.0.0.1 at 2016-06-06 15:59:36 -0400
+
+ActionController::RoutingError (No route matches [GET] "/automatedmetareview"):
+  actionpack (4.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.5) lib/rails/engine.rb:514:in `call'
+  railties (4.1.5) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.8ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (92.1ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (237.8ms)
+
+
+Started GET "/metareviewgenerator" for 127.0.0.1 at 2016-06-06 15:59:47 -0400
+
+ActionController::RoutingError (uninitialized constant MetareviewgeneratorsController):
+  activesupport (4.1.5) lib/active_support/inflector/methods.rb:238:in `const_get'
+  activesupport (4.1.5) lib/active_support/inflector/methods.rb:238:in `block in constantize'
+  activesupport (4.1.5) lib/active_support/inflector/methods.rb:236:in `each'
+  activesupport (4.1.5) lib/active_support/inflector/methods.rb:236:in `inject'
+  activesupport (4.1.5) lib/active_support/inflector/methods.rb:236:in `constantize'
+  actionpack (4.1.5) lib/action_dispatch/routing/route_set.rb:78:in `controller_reference'
+  actionpack (4.1.5) lib/action_dispatch/routing/route_set.rb:68:in `controller'
+  actionpack (4.1.5) lib/action_dispatch/routing/route_set.rb:46:in `call'
+  actionpack (4.1.5) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.1.5) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.5) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.5) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.5) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.5) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.5) lib/rails/engine.rb:514:in `call'
+  railties (4.1.5) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.0ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.1ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (298.1ms)
+
+
+Started POST "/metareviewgenerator/content" for 127.0.0.1 at 2016-06-06 17:18:03 -0400
+
+ActionController::RoutingError (undefined method `swagger_controller' for MetareviewgeneratorController:Class):
+  app/controllers/metareviewgenerator_controller.rb:23:in `<class:MetareviewgeneratorController>'
+  app/controllers/metareviewgenerator_controller.rb:20:in `<top (required)>'
+
+
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.8ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.7ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (133.0ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-06 17:19:12 -0400
+
+ActionController::RoutingError (undefined method `swagger_controller' for MetareviewgeneratorController:Class):
+  app/controllers/metareviewgenerator_controller.rb:23:in `<class:MetareviewgeneratorController>'
+  app/controllers/metareviewgenerator_controller.rb:20:in `<top (required)>'
+
+
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.8ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.9ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (166.4ms)
+
+
+Started GET "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-06 17:19:30 -0400
+
+ActionController::RoutingError (No route matches [GET] "/metareviewgenerator/create"):
+  actionpack (4.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.5) lib/rails/engine.rb:514:in `call'
+  railties (4.1.5) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.4ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (115.3ms)
+
+
+Started POST "/metareviewgenerator/content" for 127.0.0.1 at 2016-06-06 17:22:56 -0400
+
+ActionController::RoutingError (undefined method `swagger_controller' for MetareviewgeneratorController:Class):
+  app/controllers/metareviewgenerator_controller.rb:23:in `<class:MetareviewgeneratorController>'
+  app/controllers/metareviewgenerator_controller.rb:20:in `<top (required)>'
+
+
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.6ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.8ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (196.0ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-06 17:23:45 -0400
+
+ActionController::RoutingError (undefined method `swagger_controller' for MetareviewgeneratorController:Class):
+  app/controllers/metareviewgenerator_controller.rb:23:in `<class:MetareviewgeneratorController>'
+  app/controllers/metareviewgenerator_controller.rb:20:in `<top (required)>'
+
+
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (6.2ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (150.0ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-06 17:24:19 -0400
+
+ActionController::RoutingError (undefined method `swagger_controller' for MetareviewgeneratorController:Class):
+  app/controllers/metareviewgenerator_controller.rb:23:in `<class:MetareviewgeneratorController>'
+  app/controllers/metareviewgenerator_controller.rb:20:in `<top (required)>'
+
+
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.5ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (160.8ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-06 17:25:40 -0400
+
+SyntaxError (/Users/ferry/Downloads/ExpertizaCode/autometareviews0.1/app/controllers/metareviewgenerator_controller.rb:163: syntax error, unexpected keyword_end, expecting end-of-input):
+  app/controllers/metareviewgenerator_controller.rb:163: syntax error, unexpected keyword_end, expecting end-of-input
+
+
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (221.8ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-06 17:26:12 -0400
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"My rubric comment", "rubric"=>"My rubric text", "submission"=>"Here is submssion", "metareviewgenerator"=>{"reviews"=>"My rubric comment", "rubric"=>"My rubric text", "submission"=>"Here is submssion"}}
+Completed 500 Internal Server Error in 781ms
+
+RuntimeError (Could not find JAR file (looking in /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/stanford-core-nlp-0.5.1/bin/joda-time.jar).):
+  app/models/automated_metareview.rb:245:in `calculate_metareview_metrics'
+  app/controllers/metareviewgenerator_controller.rb:53:in `block in create'
+  app/controllers/metareviewgenerator_controller.rb:47:in `create'
+
+
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.8ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.0ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (17.9ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (256.2ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-06 17:32:00 -0400
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"My rubric comment", "rubric"=>"My rubric text", "submission"=>"Here is submssion", "metareviewgenerator"=>{"reviews"=>"My rubric comment", "rubric"=>"My rubric text", "submission"=>"Here is submssion"}}
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-06 17:33:42 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (3.9ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"My rubric comment", "rubric"=>"My rubric text", "submission"=>"Here is submssion", "metareviewgenerator"=>{"reviews"=>"My rubric comment", "rubric"=>"My rubric text", "submission"=>"Here is submssion"}}
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-06 17:35:33 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (3.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"My rubric comment", "rubric"=>"My rubric text", "submission"=>"Here is submssion", "metareviewgenerator"=>{"reviews"=>"My rubric comment", "rubric"=>"My rubric text", "submission"=>"Here is submssion"}}
+Completed 500 Internal Server Error in 792ms
+
+RuntimeError (Could not find JAR file (looking in /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/stanford-core-nlp-0.5.1/bin/stanford-parser.jar).):
+  app/models/automated_metareview.rb:245:in `calculate_metareview_metrics'
+  app/controllers/metareviewgenerator_controller.rb:53:in `block in create'
+  app/controllers/metareviewgenerator_controller.rb:47:in `create'
+
+
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.3ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (124.6ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-06 17:38:22 -0400
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"My rubric comment", "rubric"=>"My rubric text", "submission"=>"Here is submssion", "metareviewgenerator"=>{"reviews"=>"My rubric comment", "rubric"=>"My rubric text", "submission"=>"Here is submssion"}}
+Completed 200 OK in 24259ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-07 13:24:43 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (19.9ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"My rubric comment", "rubric"=>"My rubric text", "submission"=>"Here is submssion", "metareviewgenerator"=>{"reviews"=>"My rubric comment", "rubric"=>"My rubric text", "submission"=>"Here is submssion"}}
+Completed 200 OK in 208752ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-07 13:28:28 -0400
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"My rubric comment", "rubric"=>"My rubric text", "submission"=>"Here is submssion", "metareviewgenerator"=>{"reviews"=>"My rubric comment", "rubric"=>"My rubric text", "submission"=>"Here is submssion"}}
+Completed 200 OK in 217636ms (Views: 4.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-07 13:32:05 -0400
+
+ActionController::RoutingError (No route matches [GET] "/metareviewgenerator/create"):
+  actionpack (4.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.5) lib/rails/engine.rb:514:in `call'
+  railties (4.1.5) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.5ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (18.9ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (38.1ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (495.5ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-07 13:42:22 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (4.5ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"My rubric comment", "rubric"=>"My rubric text", "submission"=>"Here is submssion", "metareviewgenerator"=>{"reviews"=>"My rubric comment", "rubric"=>"My rubric text", "submission"=>"Here is submssion"}}
+Completed 500 Internal Server Error in 42615ms
+
+ThreadError (Target thread must not be main thread):
+  app/models/predict_class.rb:45:in `join'
+  app/models/predict_class.rb:45:in `block in predict_classes'
+  app/models/predict_class.rb:43:in `each'
+  app/models/predict_class.rb:43:in `predict_classes'
+  app/models/automated_metareview.rb:277:in `calculate_metareview_metrics'
+  app/controllers/metareviewgenerator_controller.rb:53:in `block in create'
+  app/controllers/metareviewgenerator_controller.rb:47:in `create'
+
+
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.7ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.2ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (157.7ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-07 13:48:40 -0400
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"My rubric comment", "rubric"=>"My rubric text", "submission"=>"Here is submssion", "metareviewgenerator"=>{"reviews"=>"My rubric comment", "rubric"=>"My rubric text", "submission"=>"Here is submssion"}}
+Completed 500 Internal Server Error in 8463ms
+
+ThreadError (Target thread must not be main thread):
+  app/models/predict_class.rb:45:in `join'
+  app/models/predict_class.rb:45:in `block in predict_classes'
+  app/models/predict_class.rb:43:in `each'
+  app/models/predict_class.rb:43:in `predict_classes'
+  app/models/automated_metareview.rb:277:in `calculate_metareview_metrics'
+  app/controllers/metareviewgenerator_controller.rb:53:in `block in create'
+  app/controllers/metareviewgenerator_controller.rb:47:in `create'
+
+
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.6ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.4ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.5ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (305.8ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-07 14:00:41 -0400
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"My rubric comment", "rubric"=>"My rubric text", "submission"=>"Here is submssion", "metareviewgenerator"=>{"reviews"=>"My rubric comment", "rubric"=>"My rubric text", "submission"=>"Here is submssion"}}
+Completed 500 Internal Server Error in 7783ms
+
+ThreadError (Target thread must not be main thread):
+  app/models/predict_class.rb:45:in `join'
+  app/models/predict_class.rb:45:in `block in predict_classes'
+  app/models/predict_class.rb:43:in `each'
+  app/models/predict_class.rb:43:in `predict_classes'
+  app/models/automated_metareview.rb:277:in `calculate_metareview_metrics'
+  app/controllers/metareviewgenerator_controller.rb:53:in `block in create'
+  app/controllers/metareviewgenerator_controller.rb:47:in `create'
+
+
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.2ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.6ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.5ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (240.3ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-07 14:02:11 -0400
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"My rubric comment", "rubric"=>"My rubric text", "submission"=>"Here is submssion", "metareviewgenerator"=>{"reviews"=>"My rubric comment", "rubric"=>"My rubric text", "submission"=>"Here is submssion"}}
+Completed 500 Internal Server Error in 26442ms
+
+ThreadError (Target thread must not be main thread):
+  app/models/predict_class.rb:45:in `join'
+  app/models/predict_class.rb:45:in `block in predict_classes'
+  app/models/predict_class.rb:43:in `each'
+  app/models/predict_class.rb:43:in `predict_classes'
+  app/models/automated_metareview.rb:277:in `calculate_metareview_metrics'
+  app/controllers/metareviewgenerator_controller.rb:53:in `block in create'
+  app/controllers/metareviewgenerator_controller.rb:47:in `create'
+
+
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.2ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.5ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.1ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (236.3ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-07 14:03:24 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"My rubric comment", "rubric"=>"My rubric text", "submission"=>"Here is submssion", "metareviewgenerator"=>{"reviews"=>"My rubric comment", "rubric"=>"My rubric text", "submission"=>"Here is submssion"}}
+Completed 500 Internal Server Error in 100011ms
+
+NoMethodError (undefined method `*' for nil:NilClass):
+  app/models/automated_metareview.rb:278:in `calculate_metareview_metrics'
+  app/controllers/metareviewgenerator_controller.rb:53:in `block in create'
+  app/controllers/metareviewgenerator_controller.rb:47:in `create'
+
+
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.9ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.7ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.9ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (167.2ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-07 14:06:44 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"My rubric comment", "rubric"=>"My rubric text", "submission"=>"Here is submssion", "metareviewgenerator"=>{"reviews"=>"My rubric comment", "rubric"=>"My rubric text", "submission"=>"Here is submssion"}}
+Completed 200 OK in 59087ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-07 14:07:45 -0400
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"My rubric comment", "rubric"=>"My rubric text", "submission"=>"Here is submssion", "metareviewgenerator"=>{"reviews"=>"My rubric comment", "rubric"=>"My rubric text", "submission"=>"Here is submssion"}}
+Completed 200 OK in 12695ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-07 14:15:01 -0400
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"My rubric comment", "rubric"=>"My rubric text", "submission"=>"Here is submssion", "metareviewgenerator"=>{"reviews"=>"My rubric comment", "rubric"=>"My rubric text", "submission"=>"Here is submssion"}}
+Completed 200 OK in 12617ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-07 14:15:31 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"My rubric comment", "rubric"=>"My rubric text", "submission"=>"Here is submssion", "metareviewgenerator"=>{"reviews"=>"My rubric comment", "rubric"=>"My rubric text", "submission"=>"Here is submssion"}}
+Completed 200 OK in 120156ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-07 14:17:36 -0400
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"My rubric comment", "rubric"=>"My rubric text", "submission"=>"Here is submssion", "metareviewgenerator"=>{"reviews"=>"My rubric comment", "rubric"=>"My rubric text", "submission"=>"Here is submssion"}}
+Completed 200 OK in 24281ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-07 14:18:07 -0400
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"My rubric comment", "rubric"=>"My rubric text", "submission"=>"Here is submssion", "metareviewgenerator"=>{"reviews"=>"My rubric comment", "rubric"=>"My rubric text", "submission"=>"Here is submssion"}}
+Completed 200 OK in 1332ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-07 14:18:14 -0400
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"My rubric comment", "rubric"=>"My rubric text", "submission"=>"Here is submssion", "metareviewgenerator"=>{"reviews"=>"My rubric comment", "rubric"=>"My rubric text", "submission"=>"Here is submssion"}}
+Completed 200 OK in 917ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-07 14:19:50 -0400
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"the content is too generic. they should elaborate something ", "rubric"=>"rate the content", "submission"=>"This is a submission about something", "metareviewgenerator"=>{"reviews"=>"the content is too generic. they should elaborate something ", "rubric"=>"rate the content", "submission"=>"This is a submission about something"}}
+Completed 200 OK in 13793ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-07 14:20:10 -0400
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"the content is too generic. they should elaborate something ", "rubric"=>"rate the content", "submission"=>"This is a submission about something", "metareviewgenerator"=>{"reviews"=>"the content is too generic. they should elaborate something ", "rubric"=>"rate the content", "submission"=>"This is a submission about something"}}
+Completed 200 OK in 14537ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-07 14:22:42 -0400
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"the content is too generic. they should elaborate something ", "rubric"=>"rate the content", "submission"=>"This is a submission about something", "metareviewgenerator"=>{"reviews"=>"the content is too generic. they should elaborate something ", "rubric"=>"rate the content", "submission"=>"This is a submission about something"}}
+Completed 200 OK in 108141ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-07 14:28:57 -0400
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"the content is too generic. they should elaborate something ", "rubric"=>"rate the content", "submission"=>"This is a submission about something", "metareviewgenerator"=>{"reviews"=>"the content is too generic. they should elaborate something ", "rubric"=>"rate the content", "submission"=>"This is a submission about something"}}
+  [1m[35mPositiveWord Load (26.0ms)[0m  SELECT `positive_words`.* FROM `positive_words`
+  [1m[36mNegativeWord Load (8.2ms)[0m  [1mSELECT `negative_words`.* FROM `negative_words`[0m
+Completed 200 OK in 22239ms (Views: 0.4ms | ActiveRecord: 34.1ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-07 14:29:49 -0400
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"the content is too generic. they should elaborate something ", "rubric"=>"rate the content", "submission"=>"This is a submission about something", "metareviewgenerator"=>{"reviews"=>"the content is too generic. they should elaborate something ", "rubric"=>"rate the content", "submission"=>"This is a submission about something"}}
+  [1m[35mPositiveWord Load (0.6ms)[0m  SELECT `positive_words`.* FROM `positive_words`
+  [1m[36mNegativeWord Load (0.4ms)[0m  [1mSELECT `negative_words`.* FROM `negative_words`[0m
+Completed 200 OK in 15708ms (Views: 0.3ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-07 14:30:28 -0400
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"the content is too generic. they should elaborate something ", "rubric"=>"rate the content", "submission"=>"This is a submission about something", "metareviewgenerator"=>{"reviews"=>"the content is too generic. they should elaborate something ", "rubric"=>"rate the content", "submission"=>"This is a submission about something"}}
+  [1m[35mPositiveWord Load (0.4ms)[0m  SELECT `positive_words`.* FROM `positive_words`
+  [1m[36mNegativeWord Load (0.4ms)[0m  [1mSELECT `negative_words`.* FROM `negative_words`[0m
+Completed 200 OK in 14360ms (Views: 0.2ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-07 14:30:47 -0400
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"the content is too generic. they should elaborate something ", "rubric"=>"rate the content", "submission"=>"This is a submission about something", "metareviewgenerator"=>{"reviews"=>"the content is too generic. they should elaborate something ", "rubric"=>"rate the content", "submission"=>"This is a submission about something"}}
+  [1m[35mPositiveWord Load (0.4ms)[0m  SELECT `positive_words`.* FROM `positive_words`
+  [1m[36mNegativeWord Load (1.6ms)[0m  [1mSELECT `negative_words`.* FROM `negative_words`[0m
+Completed 200 OK in 13378ms (Views: 0.3ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-07 14:31:14 -0400
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"the content is too generic. they should elaborate something ", "rubric"=>"rate the content", "submission"=>"This is a submission about something", "metareviewgenerator"=>{"reviews"=>"the content is too generic. they should elaborate something ", "rubric"=>"rate the content", "submission"=>"This is a submission about something"}}
+  [1m[35mPositiveWord Load (0.4ms)[0m  SELECT `positive_words`.* FROM `positive_words`
+  [1m[36mNegativeWord Load (0.4ms)[0m  [1mSELECT `negative_words`.* FROM `negative_words`[0m
+Completed 200 OK in 15042ms (Views: 0.5ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-07 14:31:34 -0400
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"the content is too generic. they should elaborate something ", "rubric"=>"rate the content", "submission"=>"This is a submission about something", "metareviewgenerator"=>{"reviews"=>"the content is too generic. they should elaborate something ", "rubric"=>"rate the content", "submission"=>"This is a submission about something"}}
+  [1m[35mPositiveWord Load (0.4ms)[0m  SELECT `positive_words`.* FROM `positive_words`
+  [1m[36mNegativeWord Load (0.9ms)[0m  [1mSELECT `negative_words`.* FROM `negative_words`[0m
+Completed 200 OK in 14250ms (Views: 0.1ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-07 14:32:03 -0400
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"the content is too generic. they should elaborate something ", "rubric"=>"rate the content", "submission"=>"This is a submission about something", "metareviewgenerator"=>{"reviews"=>"the content is too generic. they should elaborate something ", "rubric"=>"rate the content", "submission"=>"This is a submission about something"}}
+  [1m[35mPositiveWord Load (0.3ms)[0m  SELECT `positive_words`.* FROM `positive_words`
+  [1m[36mNegativeWord Load (0.2ms)[0m  [1mSELECT `negative_words`.* FROM `negative_words`[0m
+Completed 200 OK in 12782ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-07 14:32:24 -0400
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"the content is too generic. they should elaborate something ", "rubric"=>"rate the content", "submission"=>"This is a submission about something", "metareviewgenerator"=>{"reviews"=>"the content is too generic. they should elaborate something ", "rubric"=>"rate the content", "submission"=>"This is a submission about something"}}
+  [1m[35mPositiveWord Load (5.8ms)[0m  SELECT `positive_words`.* FROM `positive_words`
+  [1m[36mNegativeWord Load (0.5ms)[0m  [1mSELECT `negative_words`.* FROM `negative_words`[0m
+Completed 200 OK in 14103ms (Views: 0.1ms | ActiveRecord: 6.4ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-07 14:33:51 -0400
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"the content is too generic. they should elaborate something ", "rubric"=>"rate the content", "submission"=>"This is a submission about something", "metareviewgenerator"=>{"reviews"=>"the content is too generic. they should elaborate something ", "rubric"=>"rate the content", "submission"=>"This is a submission about something"}}
+  [1m[35mPositiveWord Load (0.5ms)[0m  SELECT `positive_words`.* FROM `positive_words`
+  [1m[36mNegativeWord Load (0.9ms)[0m  [1mSELECT `negative_words`.* FROM `negative_words`[0m
+Completed 200 OK in 14538ms (Views: 0.2ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-07 14:34:28 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (4.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"the content is too generic. they should elaborate something ", "rubric"=>"rate the content", "submission"=>"This is a submission about something", "metareviewgenerator"=>{"reviews"=>"the content is too generic. they should elaborate something ", "rubric"=>"rate the content", "submission"=>"This is a submission about something"}}
+  [1m[35mPositiveWord Load (0.5ms)[0m  SELECT `positive_words`.* FROM `positive_words`
+  [1m[36mNegativeWord Load (0.5ms)[0m  [1mSELECT `negative_words`.* FROM `negative_words`[0m
+Completed 200 OK in 36999ms (Views: 0.4ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-07 14:35:13 -0400
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"the content is too generic. they should elaborate something ", "rubric"=>"rate the content", "submission"=>"This is a submission about something", "metareviewgenerator"=>{"reviews"=>"the content is too generic. they should elaborate something ", "rubric"=>"rate the content", "submission"=>"This is a submission about something"}}
+  [1m[35mPositiveWord Load (0.5ms)[0m  SELECT `positive_words`.* FROM `positive_words`
+  [1m[36mNegativeWord Load (0.3ms)[0m  [1mSELECT `negative_words`.* FROM `negative_words`[0m
+Completed 200 OK in 14296ms (Views: 0.1ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-07 14:36:00 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (5.8ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"the content is too generic. they should elaborate something ", "rubric"=>"rate the content", "submission"=>"This is a submission about something", "metareviewgenerator"=>{"reviews"=>"the content is too generic. they should elaborate something ", "rubric"=>"rate the content", "submission"=>"This is a submission about something"}}
+  [1m[35mPositiveWord Load (6.7ms)[0m  SELECT `positive_words`.* FROM `positive_words`
+  [1m[36mNegativeWord Load (11.6ms)[0m  [1mSELECT `negative_words`.* FROM `negative_words`[0m
+Completed 200 OK in 38005ms (Views: 0.3ms | ActiveRecord: 18.3ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-07 14:36:45 -0400
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"the content is too generic. they should elaborate something ", "rubric"=>"rate the content", "submission"=>"This is a submission about something", "metareviewgenerator"=>{"reviews"=>"the content is too generic. they should elaborate something ", "rubric"=>"rate the content", "submission"=>"This is a submission about something"}}
+  [1m[35mPositiveWord Load (0.4ms)[0m  SELECT `positive_words`.* FROM `positive_words`
+  [1m[36mNegativeWord Load (0.2ms)[0m  [1mSELECT `negative_words`.* FROM `negative_words`[0m
+Completed 200 OK in 13101ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-07 14:39:29 -0400
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"the content is too generic. they should elaborate something ", "rubric"=>"rate the content", "submission"=>"This is a submission about something", "metareviewgenerator"=>{"reviews"=>"the content is too generic. they should elaborate something ", "rubric"=>"rate the content", "submission"=>"This is a submission about something"}}
+  [1m[35mPositiveWord Load (0.5ms)[0m  SELECT `positive_words`.* FROM `positive_words`
+  [1m[36mNegativeWord Load (1.0ms)[0m  [1mSELECT `negative_words`.* FROM `negative_words`[0m
+Completed 200 OK in 141678ms (Views: 0.1ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-07 14:43:28 -0400
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"the content is too generic. something should be elaborated clearly", "rubric"=>"rate the content", "submission"=>"This is a submission about something", "metareviewgenerator"=>{"reviews"=>"the content is too generic. something should be elaborated clearly", "rubric"=>"rate the content", "submission"=>"This is a submission about something"}}
+  [1m[35mPositiveWord Load (0.4ms)[0m  SELECT `positive_words`.* FROM `positive_words`
+  [1m[36mNegativeWord Load (0.4ms)[0m  [1mSELECT `negative_words`.* FROM `negative_words`[0m
+Completed 200 OK in 17673ms (Views: 0.1ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-07 14:45:34 -0400
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"the content is too generic. something should be elaborated clearly", "rubric"=>"rate the content", "submission"=>"This is a submission about something", "metareviewgenerator"=>{"reviews"=>"the content is too generic. something should be elaborated clearly", "rubric"=>"rate the content", "submission"=>"This is a submission about something"}}
+  [1m[35mPositiveWord Load (0.4ms)[0m  SELECT `positive_words`.* FROM `positive_words`
+  [1m[36mNegativeWord Load (0.4ms)[0m  [1mSELECT `negative_words`.* FROM `negative_words`[0m
+Completed 200 OK in 17529ms (Views: 0.1ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-07 14:46:09 -0400
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"the content is too generic. something should be elaborated clearly", "rubric"=>"rate the content", "submission"=>"This is a submission about something", "metareviewgenerator"=>{"reviews"=>"the content is too generic. something should be elaborated clearly", "rubric"=>"rate the content", "submission"=>"This is a submission about something"}}
+  [1m[35mPositiveWord Load (0.4ms)[0m  SELECT `positive_words`.* FROM `positive_words`
+  [1m[36mNegativeWord Load (0.5ms)[0m  [1mSELECT `negative_words`.* FROM `negative_words`[0m
+Completed 200 OK in 19889ms (Views: 4.9ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-07 14:48:03 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (16.9ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"the content is too generic. something should be elaborated clearly", "rubric"=>"rate the content", "submission"=>"This is a submission about something", "metareviewgenerator"=>{"reviews"=>"the content is too generic. something should be elaborated clearly", "rubric"=>"rate the content", "submission"=>"This is a submission about something"}}
+Completed 500 Internal Server Error in 23793ms
+
+TypeError (no implicit conversion of Array into String):
+  app/models/predict_class.rb:36:in `+'
+  app/models/predict_class.rb:36:in `block (2 levels) in predict_classes'
+
+
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (133.9ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-07 14:50:30 -0400
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"the content is too generic. something should be elaborated clearly", "rubric"=>"rate the content", "submission"=>"This is a submission about something", "metareviewgenerator"=>{"reviews"=>"the content is too generic. something should be elaborated clearly", "rubric"=>"rate the content", "submission"=>"This is a submission about something"}}
+Completed 500 Internal Server Error in 2905ms
+
+TypeError (no implicit conversion of Array into String):
+  app/models/predict_class.rb:36:in `+'
+  app/models/predict_class.rb:36:in `block (2 levels) in predict_classes'
+
+
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (15.3ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (232.6ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-07 14:50:56 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (3.8ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"the content is too generic. something should be elaborated clearly", "rubric"=>"rate the content", "submission"=>"This is a submission about something", "metareviewgenerator"=>{"reviews"=>"the content is too generic. something should be elaborated clearly", "rubric"=>"rate the content", "submission"=>"This is a submission about something"}}
+Completed 500 Internal Server Error in 22652ms
+
+NoMethodError (undefined method `joins' for #<Array:0x007fa5660a8738>):
+  app/models/predict_class.rb:36:in `block (2 levels) in predict_classes'
+
+
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.2ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (154.9ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-07 14:58:09 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (6.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"the content is too generic. something should be elaborated clearly", "rubric"=>"rate the content", "submission"=>"This is a submission about something", "metareviewgenerator"=>{"reviews"=>"the content is too generic. something should be elaborated clearly", "rubric"=>"rate the content", "submission"=>"This is a submission about something"}}
+Completed 500 Internal Server Error in 26611ms
+
+TypeError (no implicit conversion of Fixnum into String):
+  app/models/predict_class.rb:69:in `+'
+  app/models/predict_class.rb:69:in `compare_review_with_patterns'
+  app/models/predict_class.rb:39:in `block (2 levels) in predict_classes'
+
+
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.7ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (196.0ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-07 14:59:29 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (9.8ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"the content is too generic. something should be elaborated clearly", "rubric"=>"rate the content", "submission"=>"This is a submission about something", "metareviewgenerator"=>{"reviews"=>"the content is too generic. something should be elaborated clearly", "rubric"=>"rate the content", "submission"=>"This is a submission about something"}}
+  [1m[35mPositiveWord Load (1.4ms)[0m  SELECT `positive_words`.* FROM `positive_words`
+  [1m[36mNegativeWord Load (0.9ms)[0m  [1mSELECT `negative_words`.* FROM `negative_words`[0m
+Completed 200 OK in 36661ms (Views: 0.3ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-07 15:01:37 -0400
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"the content is too generic. something should be elaborated clearly", "rubric"=>"rate the content", "submission"=>"This is a submission about something", "metareviewgenerator"=>{"reviews"=>"the content is too generic. something should be elaborated clearly", "rubric"=>"rate the content", "submission"=>"This is a submission about something"}}
+  [1m[35mPositiveWord Load (0.4ms)[0m  SELECT `positive_words`.* FROM `positive_words`
+  [1m[36mNegativeWord Load (0.3ms)[0m  [1mSELECT `negative_words`.* FROM `negative_words`[0m
+Completed 200 OK in 32273ms (Views: 0.3ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-07 15:02:50 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (3.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"the content is too generic. something should be elaborated clearly", "rubric"=>"rate the content", "submission"=>"This is a submission about something", "metareviewgenerator"=>{"reviews"=>"the content is too generic. something should be elaborated clearly", "rubric"=>"rate the content", "submission"=>"This is a submission about something"}}
+  [1m[35mPositiveWord Load (0.9ms)[0m  SELECT `positive_words`.* FROM `positive_words`
+  [1m[36mNegativeWord Load (0.6ms)[0m  [1mSELECT `negative_words`.* FROM `negative_words`[0m
+Completed 200 OK in 79933ms (Views: 0.2ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-07 15:06:38 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"the content is too generic. something should be elaborated clearly", "rubric"=>"rate the content", "submission"=>"This is a submission about something", "metareviewgenerator"=>{"reviews"=>"the content is too generic. something should be elaborated clearly", "rubric"=>"rate the content", "submission"=>"This is a submission about something"}}
+  [1m[35mPositiveWord Load (0.6ms)[0m  SELECT `positive_words`.* FROM `positive_words`
+  [1m[36mNegativeWord Load (0.8ms)[0m  [1mSELECT `negative_words`.* FROM `negative_words`[0m
+Completed 200 OK in 34731ms (Views: 0.3ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-07 15:09:11 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (3.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"the content is too generic. something should be elaborated clearly", "rubric"=>"rate the content", "submission"=>"This is a submission about something", "metareviewgenerator"=>{"reviews"=>"the content is too generic. something should be elaborated clearly", "rubric"=>"rate the content", "submission"=>"This is a submission about something"}}
+  [1m[35mPositiveWord Load (0.6ms)[0m  SELECT `positive_words`.* FROM `positive_words`
+  [1m[36mNegativeWord Load (0.7ms)[0m  [1mSELECT `negative_words`.* FROM `negative_words`[0m
+Completed 200 OK in 37835ms (Views: 0.3ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-07 15:15:34 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"the content is too generic. something should be elaborated clearly", "rubric"=>"rate the content", "submission"=>"This is a submission about something", "metareviewgenerator"=>{"reviews"=>"the content is too generic. something should be elaborated clearly", "rubric"=>"rate the content", "submission"=>"This is a submission about something"}}
+Completed 500 Internal Server Error in 20592ms
+
+NameError (undefined local variable or method `threads' for #<PredictClass:0x007fe75b713cd0>):
+  app/models/predict_class.rb:76:in `block (2 levels) in compare_review_with_patterns'
+  app/models/predict_class.rb:74:in `block in compare_review_with_patterns'
+  app/models/predict_class.rb:70:in `compare_review_with_patterns'
+  app/models/predict_class.rb:38:in `block in predict_classes'
+  app/models/predict_class.rb:34:in `each'
+  app/models/predict_class.rb:34:in `each_with_index'
+  app/models/predict_class.rb:34:in `predict_classes'
+  app/models/automated_metareview.rb:277:in `calculate_metareview_metrics'
+  app/controllers/metareviewgenerator_controller.rb:53:in `block in create'
+  app/controllers/metareviewgenerator_controller.rb:47:in `create'
+
+
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.9ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (177.0ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-07 15:17:49 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"the content is too generic. something should be elaborated clearly", "rubric"=>"rate the content", "submission"=>"This is a submission about something", "metareviewgenerator"=>{"reviews"=>"the content is too generic. something should be elaborated clearly", "rubric"=>"rate the content", "submission"=>"This is a submission about something"}}
+  [1m[35mPositiveWord Load (0.9ms)[0m  SELECT `positive_words`.* FROM `positive_words`
+  [1m[36mNegativeWord Load (0.8ms)[0m  [1mSELECT `negative_words`.* FROM `negative_words`[0m
+Completed 200 OK in 37539ms (Views: 0.2ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-07 15:18:40 -0400
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"the content is too generic. something should be elaborated clearly", "rubric"=>"rate the content", "submission"=>"This is a submission about something", "metareviewgenerator"=>{"reviews"=>"the content is too generic. something should be elaborated clearly", "rubric"=>"rate the content", "submission"=>"This is a submission about something"}}
+  [1m[35mPositiveWord Load (0.4ms)[0m  SELECT `positive_words`.* FROM `positive_words`
+  [1m[36mNegativeWord Load (0.5ms)[0m  [1mSELECT `negative_words`.* FROM `negative_words`[0m
+Completed 200 OK in 12442ms (Views: 0.2ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-07 15:21:31 -0400
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"the content is too generic. something should be elaborated clearly", "rubric"=>"rate the content", "submission"=>"This is a submission about something", "metareviewgenerator"=>{"reviews"=>"the content is too generic. something should be elaborated clearly", "rubric"=>"rate the content", "submission"=>"This is a submission about something"}}
+  [1m[35mPositiveWord Load (2.1ms)[0m  SELECT `positive_words`.* FROM `positive_words`
+  [1m[36mNegativeWord Load (0.7ms)[0m  [1mSELECT `negative_words`.* FROM `negative_words`[0m
+Completed 200 OK in 712988ms (Views: 1.7ms | ActiveRecord: 2.8ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-07 15:33:27 -0400
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"the content is too generic. something should be elaborated clearly", "rubric"=>"rate the content", "submission"=>"This is a submission about something", "metareviewgenerator"=>{"reviews"=>"the content is too generic. something should be elaborated clearly", "rubric"=>"rate the content", "submission"=>"This is a submission about something"}}
+  [1m[35mPositiveWord Load (0.5ms)[0m  SELECT `positive_words`.* FROM `positive_words`
+  [1m[36mNegativeWord Load (0.5ms)[0m  [1mSELECT `negative_words`.* FROM `negative_words`[0m
+Completed 200 OK in 147234ms (Views: 1.2ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-07 15:38:07 -0400
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"the content is too generic. something should be elaborated clearly", "rubric"=>"rate the content", "submission"=>"This is a submission about something", "metareviewgenerator"=>{"reviews"=>"the content is too generic. something should be elaborated clearly", "rubric"=>"rate the content", "submission"=>"This is a submission about something"}}
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-07 15:39:01 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"the content is too generic. something should be elaborated clearly", "rubric"=>"rate the content", "submission"=>"This is a submission about something", "metareviewgenerator"=>{"reviews"=>"the content is too generic. something should be elaborated clearly", "rubric"=>"rate the content", "submission"=>"This is a submission about something"}}
+  [1m[35mPositiveWord Load (1.2ms)[0m  SELECT `positive_words`.* FROM `positive_words`
+  [1m[36mNegativeWord Load (0.7ms)[0m  [1mSELECT `negative_words`.* FROM `negative_words`[0m
+Completed 200 OK in 141248ms (Views: 0.3ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-07 15:41:58 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (4.6ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"the content is too generic. something should be elaborated clearly", "rubric"=>"rate the content", "submission"=>"This is a submission about something", "metareviewgenerator"=>{"reviews"=>"the content is too generic. something should be elaborated clearly", "rubric"=>"rate the content", "submission"=>"This is a submission about something"}}
+  [1m[35mPositiveWord Load (0.6ms)[0m  SELECT `positive_words`.* FROM `positive_words`
+  [1m[36mNegativeWord Load (0.6ms)[0m  [1mSELECT `negative_words`.* FROM `negative_words`[0m
+Completed 200 OK in 28710ms (Views: 0.2ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-07 15:42:40 -0400
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"the content is too generic. something should be elaborated clearly", "rubric"=>"rate the content", "submission"=>"This is a submission about something", "metareviewgenerator"=>{"reviews"=>"the content is too generic. something should be elaborated clearly", "rubric"=>"rate the content", "submission"=>"This is a submission about something"}}
+  [1m[35mPositiveWord Load (0.4ms)[0m  SELECT `positive_words`.* FROM `positive_words`
+  [1m[36mNegativeWord Load (0.3ms)[0m  [1mSELECT `negative_words`.* FROM `negative_words`[0m
+Completed 200 OK in 28231ms (Views: 0.1ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-07 15:44:34 -0400
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"the content is too generic. something should be elaborated clearly", "rubric"=>"rate the content", "submission"=>"This is a submission about something", "metareviewgenerator"=>{"reviews"=>"the content is too generic. something should be elaborated clearly", "rubric"=>"rate the content", "submission"=>"This is a submission about something"}}
+  [1m[35mPositiveWord Load (0.4ms)[0m  SELECT `positive_words`.* FROM `positive_words`
+  [1m[36mNegativeWord Load (0.4ms)[0m  [1mSELECT `negative_words`.* FROM `negative_words`[0m
+Completed 200 OK in 22930ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-07 15:56:14 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"the content is too generic. something should be elaborated clearly", "rubric"=>"rate the content", "submission"=>"This is a submission about something", "metareviewgenerator"=>{"reviews"=>"the content is too generic. something should be elaborated clearly", "rubric"=>"rate the content", "submission"=>"This is a submission about something"}}
+  [1m[35mPositiveWord Load (0.9ms)[0m  SELECT `positive_words`.* FROM `positive_words`
+  [1m[36mNegativeWord Load (0.7ms)[0m  [1mSELECT `negative_words`.* FROM `negative_words`[0m
+Completed 200 OK in 38540ms (Views: 0.9ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-07 16:00:01 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"the content is too generic. something should be elaborated clearly", "rubric"=>"rate the content", "submission"=>"This is a submission about something", "metareviewgenerator"=>{"reviews"=>"the content is too generic. something should be elaborated clearly", "rubric"=>"rate the content", "submission"=>"This is a submission about something"}}
+  [1m[35mPositiveWord Load (0.5ms)[0m  SELECT `positive_words`.* FROM `positive_words`
+  [1m[36mNegativeWord Load (0.4ms)[0m  [1mSELECT `negative_words`.* FROM `negative_words`[0m
+Completed 200 OK in 32539ms (Views: 0.2ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-07 16:18:09 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"the content is too generic. something should be elaborated clearly", "rubric"=>"rate the content", "submission"=>"This is a submission about something", "metareviewgenerator"=>{"reviews"=>"the content is too generic. something should be elaborated clearly", "rubric"=>"rate the content", "submission"=>"This is a submission about something"}}
+Completed 500 Internal Server Error in 703ms
+
+NameError (uninitialized constant Automated_Metareview::CORE_NLP_TAGGER):
+  app/models/automated_metareview.rb:253:in `calculate_metareview_metrics'
+  app/controllers/metareviewgenerator_controller.rb:53:in `block in create'
+  app/controllers/metareviewgenerator_controller.rb:47:in `create'
+
+
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.3ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (213.4ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-07 16:22:29 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (2.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"the content is too generic. something should be elaborated clearly", "rubric"=>"rate the content", "submission"=>"This is a submission about something", "metareviewgenerator"=>{"reviews"=>"the content is too generic. something should be elaborated clearly", "rubric"=>"rate the content", "submission"=>"This is a submission about something"}}
+  [1m[35mPositiveWord Load (0.6ms)[0m  SELECT `positive_words`.* FROM `positive_words`
+  [1m[36mNegativeWord Load (0.5ms)[0m  [1mSELECT `negative_words`.* FROM `negative_words`[0m
+Completed 200 OK in 21203ms (Views: 0.2ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-07 16:23:00 -0400
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"the content is too generic. something should be elaborated clearly", "rubric"=>"rate the content", "submission"=>"This is a submission about something", "metareviewgenerator"=>{"reviews"=>"the content is too generic. something should be elaborated clearly", "rubric"=>"rate the content", "submission"=>"This is a submission about something"}}
+  [1m[35mPositiveWord Load (0.4ms)[0m  SELECT `positive_words`.* FROM `positive_words`
+  [1m[36mNegativeWord Load (0.4ms)[0m  [1mSELECT `negative_words`.* FROM `negative_words`[0m
+Completed 200 OK in 38062ms (Views: 0.1ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-07 16:27:57 -0400
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"the content is too generic. something should be elaborated clearly", "rubric"=>"rate the content", "submission"=>"This is a submission about something", "metareviewgenerator"=>{"reviews"=>"the content is too generic. something should be elaborated clearly", "rubric"=>"rate the content", "submission"=>"This is a submission about something"}}
+  [1m[35mPositiveWord Load (0.4ms)[0m  SELECT `positive_words`.* FROM `positive_words`
+  [1m[36mNegativeWord Load (0.4ms)[0m  [1mSELECT `negative_words`.* FROM `negative_words`[0m
+Completed 200 OK in 11751ms (Views: 0.2ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-07 16:28:44 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"the content is too generic. something should be elaborated clearly", "rubric"=>"rate the content", "submission"=>"This is a submission about something", "metareviewgenerator"=>{"reviews"=>"the content is too generic. something should be elaborated clearly", "rubric"=>"rate the content", "submission"=>"This is a submission about something"}}
+  [1m[35mPositiveWord Load (14.1ms)[0m  SELECT `positive_words`.* FROM `positive_words`
+  [1m[36mNegativeWord Load (6.5ms)[0m  [1mSELECT `negative_words`.* FROM `negative_words`[0m
+Completed 200 OK in 23244ms (Views: 0.3ms | ActiveRecord: 20.6ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-07 16:29:44 -0400
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"the content is too generic. something should be elaborated clearly", "rubric"=>"rate the content", "submission"=>"This is a submission about something", "metareviewgenerator"=>{"reviews"=>"the content is too generic. something should be elaborated clearly", "rubric"=>"rate the content", "submission"=>"This is a submission about something"}}
+  [1m[35mPositiveWord Load (0.5ms)[0m  SELECT `positive_words`.* FROM `positive_words`
+  [1m[36mNegativeWord Load (1.0ms)[0m  [1mSELECT `negative_words`.* FROM `negative_words`[0m
+Completed 200 OK in 14296ms (Views: 0.1ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-07 16:30:03 -0400
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"the content is too generic. something should be elaborated clearly", "rubric"=>"rate the content", "submission"=>"This is a submission about something", "metareviewgenerator"=>{"reviews"=>"the content is too generic. something should be elaborated clearly", "rubric"=>"rate the content", "submission"=>"This is a submission about something"}}
+  [1m[35mPositiveWord Load (0.4ms)[0m  SELECT `positive_words`.* FROM `positive_words`
+  [1m[36mNegativeWord Load (0.3ms)[0m  [1mSELECT `negative_words`.* FROM `negative_words`[0m
+Completed 200 OK in 24386ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-07 16:31:17 -0400
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"the content is too generic. something should be elaborated clearly", "rubric"=>"rate the content", "submission"=>"This is a submission about something", "metareviewgenerator"=>{"reviews"=>"the content is too generic. something should be elaborated clearly", "rubric"=>"rate the content", "submission"=>"This is a submission about something"}}
+  [1m[35mPositiveWord Load (0.4ms)[0m  SELECT `positive_words`.* FROM `positive_words`
+  [1m[36mNegativeWord Load (0.2ms)[0m  [1mSELECT `negative_words`.* FROM `negative_words`[0m
+Completed 200 OK in 12714ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-07 16:45:24 -0400
+Error occurred while parsing request parameters.
+Contents:
+
+{"reviews":"After a blockbuster detour with Furious 7, director James Wan returns to his horror roots for like the fifth time in his career with The Conjuring 2, which follows Conju-Uno‘s Ed and Lorraine Warren into their next really true scary case. The original 2013 film was a Certified Fresh smash for Wan and company, notable because it’s rare for horror movies to get Fresh Tomatometer scores, and even rarer for their franchise sequels. So the fact Conjuring 2 is drawing almost the same praise as its predecessor…well, that inspires this week’s gallery: 24 best-reviewed horror sequels!","rubric":"rate the content","submission":"Redemption is presented in the first- and third-person perspectives. The player controls Christof and up to three allies through a linear structure, providing the player with missions to progress through a set narrative. Certain actions committed by Christof throughout the game can raise or lower his humanity, affecting which of the game's three endings the player receives. As a Vampire, Christof is imbued with a variety of abilities and powers that can be used to combat or avoid enemies and obstacles. Use of these abilities drains Christof's supply of blood which can be replenished by drinking from enemies or innocents. It includes multiplayer gameplay called "Storyteller", which allows one player to create a narrative for a group of players with the ability to modify the game dynamically in reaction to the players' actions. Founded in March 1998, Nihilistic's twelve-man team began development of Redemption the following month as their first game. It took the team twenty-four months to complete on a budget of US$1.8 million. The team relied on eight outside contractors to provide elements that the team could not supply, such as music and artwork. The game's development was difficult: late changes to software forced the developers to abandon completed code and assets; a focus on high-quality graphics and sound meant that the game ran poorly on some computer systems; and the original scope of the game exceeded the game's schedule and budget, forcing the team to cancel planned features. The game received a mixed critical response; reviewers praised its graphics and its multiplayer functionality, but were polarized by the quality of the story and combat. It received the 1999 Game Critics Awards for Best Role-Playing game. Redemption was released for Microsoft Windows on June 7, 2000, with a Mac OS version following in November 2001. It was successful enough to merit the production of a sequel, Vampire: The Masquerade – Bloodlines, which was released in November 2004 as an indirect sequel set in the same fictional universe."}
+
+ActionDispatch::ParamsParser::ParseError (795: unexpected token at '{"reviews":"After a blockbuster detour with Furious 7, director James Wan returns to his horror roots for like the fifth time in his career with The Conjuring 2, which follows Conju-Uno‘s Ed and Lorraine Warren into their next really true scary case. The original 2013 film was a Certified Fresh smash for Wan and company, notable because it’s rare for horror movies to get Fresh Tomatometer scores, and even rarer for their franchise sequels. So the fact Conjuring 2 is drawing almost the same praise as its predecessor…well, that inspires this week’s gallery: 24 best-reviewed horror sequels!","rubric":"rate the content","submission":"Redemption is presented in the first- and third-person perspectives. The player controls Christof and up to three allies through a linear structure, providing the player with missions to progress through a set narrative. Certain actions committed by Christof throughout the game can raise or lower his humanity, affecting which of the game's three endings the player receives. As a Vampire, Christof is imbued with a variety of abilities and powers that can be used to combat or avoid enemies and obstacles. Use of these abilities drains Christof's supply of blood which can be replenished by drinking from enemies or innocents. It includes multiplayer gameplay called "Storyteller", which allows one player to create a narrative for a group of players with the ability to modify the game dynamically in reaction to the players' actions. Founded in March 1998, Nihilistic's twelve-man team began development of Redemption the following month as their first game. It took the team twenty-four months to complete on a budget of US$1.8 million. The team relied on eight outside contractors to provide elements that the team could not supply, such as music and artwork. The game's development was difficult: late changes to software forced the developers to abandon completed code and assets; a focus on high-quality graphics and sound meant that the game ran poorly on some computer systems; and the original scope of the game exceeded the game's schedule and budget, forcing the team to cancel planned features. The game received a mixed critical response; reviewers praised its graphics and its multiplayer functionality, but were polarized by the quality of the story and combat. It received the 1999 Game Critics Awards for Best Role-Playing game. Redemption was released for Microsoft Windows on June 7, 2000, with a Mac OS version following in November 2001. It was successful enough to merit the production of a sequel, Vampire: The Masquerade – Bloodlines, which was released in November 2004 as an indirect sequel set in the same fictional universe."}'):
+  actionpack (4.1.5) lib/action_dispatch/middleware/params_parser.rb:53:in `rescue in parse_formatted_parameters'
+  actionpack (4.1.5) lib/action_dispatch/middleware/params_parser.rb:32:in `parse_formatted_parameters'
+  actionpack (4.1.5) lib/action_dispatch/middleware/params_parser.rb:23:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.5) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.5) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.5) lib/rails/engine.rb:514:in `call'
+  railties (4.1.5) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.0ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (29.6ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (11.7ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (208.8ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-07 16:48:47 -0400
+Error occurred while parsing request parameters.
+Contents:
+
+{"reviews":"After a blockbuster detour with Furious 7, director James Wan returns to his horror roots for like the fifth time in his career with The Conjuring 2, which follows Conju-Uno‘s Ed and Lorraine Warren into their next really true scary case. The original 2013 film was a Certified Fresh smash for Wan and company, notable because it’s rare for horror movies to get Fresh Tomatometer scores, and even rarer for their franchise sequels. So the fact Conjuring 2 is drawing almost the same praise as its predecessor…well, that inspires this week’s gallery. 24 best-reviewed horror sequels!","rubric":"rate the content","submission":"Redemption is presented in the first- and third-person perspectives. The player controls Christof and up to three allies through a linear structure, providing the player with missions to progress through a set narrative. Certain actions committed by Christof throughout the game can raise or lower his humanity, affecting which of the game's three endings the player receives. As a Vampire, Christof is imbued with a variety of abilities and powers that can be used to combat or avoid enemies and obstacles. Use of these abilities drains Christof's supply of blood which can be replenished by drinking from enemies or innocents. It includes multiplayer gameplay called "Storyteller", which allows one player to create a narrative for a group of players with the ability to modify the game dynamically in reaction to the players' actions. Founded in March 1998, Nihilistic's twelve-man team began development of Redemption the following month as their first game. It took the team twenty-four months to complete on a budget of US$1.8 million. The team relied on eight outside contractors to provide elements that the team could not supply, such as music and artwork. The game's development was difficult. late changes to software forced the developers to abandon completed code and assets; a focus on high-quality graphics and sound meant that the game ran poorly on some computer systems; and the original scope of the game exceeded the game's schedule and budget, forcing the team to cancel planned features. The game received a mixed critical response; reviewers praised its graphics and its multiplayer functionality, but were polarized by the quality of the story and combat. It received the 1999 Game Critics Awards for Best Role-Playing game. Redemption was released for Microsoft Windows on June 7, 2000, with a Mac OS version following in November 2001. It was successful enough to merit the production of a sequel, Vampire. The Masquerade – Bloodlines, which was released in November 2004 as an indirect sequel set in the same fictional universe."}
+
+ActionDispatch::ParamsParser::ParseError (795: unexpected token at '{"reviews":"After a blockbuster detour with Furious 7, director James Wan returns to his horror roots for like the fifth time in his career with The Conjuring 2, which follows Conju-Uno‘s Ed and Lorraine Warren into their next really true scary case. The original 2013 film was a Certified Fresh smash for Wan and company, notable because it’s rare for horror movies to get Fresh Tomatometer scores, and even rarer for their franchise sequels. So the fact Conjuring 2 is drawing almost the same praise as its predecessor…well, that inspires this week’s gallery. 24 best-reviewed horror sequels!","rubric":"rate the content","submission":"Redemption is presented in the first- and third-person perspectives. The player controls Christof and up to three allies through a linear structure, providing the player with missions to progress through a set narrative. Certain actions committed by Christof throughout the game can raise or lower his humanity, affecting which of the game's three endings the player receives. As a Vampire, Christof is imbued with a variety of abilities and powers that can be used to combat or avoid enemies and obstacles. Use of these abilities drains Christof's supply of blood which can be replenished by drinking from enemies or innocents. It includes multiplayer gameplay called "Storyteller", which allows one player to create a narrative for a group of players with the ability to modify the game dynamically in reaction to the players' actions. Founded in March 1998, Nihilistic's twelve-man team began development of Redemption the following month as their first game. It took the team twenty-four months to complete on a budget of US$1.8 million. The team relied on eight outside contractors to provide elements that the team could not supply, such as music and artwork. The game's development was difficult. late changes to software forced the developers to abandon completed code and assets; a focus on high-quality graphics and sound meant that the game ran poorly on some computer systems; and the original scope of the game exceeded the game's schedule and budget, forcing the team to cancel planned features. The game received a mixed critical response; reviewers praised its graphics and its multiplayer functionality, but were polarized by the quality of the story and combat. It received the 1999 Game Critics Awards for Best Role-Playing game. Redemption was released for Microsoft Windows on June 7, 2000, with a Mac OS version following in November 2001. It was successful enough to merit the production of a sequel, Vampire. The Masquerade – Bloodlines, which was released in November 2004 as an indirect sequel set in the same fictional universe."}'):
+  actionpack (4.1.5) lib/action_dispatch/middleware/params_parser.rb:53:in `rescue in parse_formatted_parameters'
+  actionpack (4.1.5) lib/action_dispatch/middleware/params_parser.rb:32:in `parse_formatted_parameters'
+  actionpack (4.1.5) lib/action_dispatch/middleware/params_parser.rb:23:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.5) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.5) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.5) lib/rails/engine.rb:514:in `call'
+  railties (4.1.5) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.5ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.8ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.5ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (195.1ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-07 16:49:58 -0400
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"After a blockbuster detour with Furious 7, director James Wan returns to his horror roots for like the fifth time in his career with The Conjuring 2, which follows Conju-Uno‘s Ed and Lorraine Warren into their next really true scary case. The original 2013 film was a Certified Fresh smash for Wan and company, notable because it’s rare for horror movies to get Fresh Tomatometer scores, and even rarer for their franchise sequels. So the fact Conjuring 2 is drawing almost the same praise as its predecessor…well, that inspires this week’s gallery. 24 best-reviewed horror sequels!", "rubric"=>"rate the content", "submission"=>"Redemption is presented in the first- and third-person perspectives. The player controls Christof and up to three allies through a linear structure, providing the player with missions to progress through a set narrative. Certain actions committed by Christof throughout the game can raise or lower his humanity, affecting which of the game's three endings the player receives. As a Vampire, Christof is imbued with a variety of abilities and powers that can be used to combat or avoid enemies and obstacles. Use of these abilities drains Christof's supply of blood which can be replenished by drinking from enemies or innocents. It includes multiplayer gameplay called Storyteller, which allows one player to create a narrative for a group of players with the ability to modify the game dynamically in reaction to the players' actions. Founded in March 1998, Nihilistic's twelve-man team began development of Redemption the following month as their first game. It took the team twenty-four months to complete on a budget of US$1.8 million. The team relied on eight outside contractors to provide elements that the team could not supply, such as music and artwork. The game's development was difficult. late changes to software forced the developers to abandon completed code and assets; a focus on high-quality graphics and sound meant that the game ran poorly on some computer systems; and the original scope of the game exceeded the game's schedule and budget, forcing the team to cancel planned features. The game received a mixed critical response; reviewers praised its graphics and its multiplayer functionality, but were polarized by the quality of the story and combat. It received the 1999 Game Critics Awards for Best Role-Playing game. Redemption was released for Microsoft Windows on June 7, 2000, with a Mac OS version following in November 2001. It was successful enough to merit the production of a sequel, Vampire. The Masquerade – Bloodlines, which was released in November 2004 as an indirect sequel set in the same fictional universe.", "metareviewgenerator"=>{"reviews"=>"After a blockbuster detour with Furious 7, director James Wan returns to his horror roots for like the fifth time in his career with The Conjuring 2, which follows Conju-Uno‘s Ed and Lorraine Warren into their next really true scary case. The original 2013 film was a Certified Fresh smash for Wan and company, notable because it’s rare for horror movies to get Fresh Tomatometer scores, and even rarer for their franchise sequels. So the fact Conjuring 2 is drawing almost the same praise as its predecessor…well, that inspires this week’s gallery. 24 best-reviewed horror sequels!", "rubric"=>"rate the content", "submission"=>"Redemption is presented in the first- and third-person perspectives. The player controls Christof and up to three allies through a linear structure, providing the player with missions to progress through a set narrative. Certain actions committed by Christof throughout the game can raise or lower his humanity, affecting which of the game's three endings the player receives. As a Vampire, Christof is imbued with a variety of abilities and powers that can be used to combat or avoid enemies and obstacles. Use of these abilities drains Christof's supply of blood which can be replenished by drinking from enemies or innocents. It includes multiplayer gameplay called Storyteller, which allows one player to create a narrative for a group of players with the ability to modify the game dynamically in reaction to the players' actions. Founded in March 1998, Nihilistic's twelve-man team began development of Redemption the following month as their first game. It took the team twenty-four months to complete on a budget of US$1.8 million. The team relied on eight outside contractors to provide elements that the team could not supply, such as music and artwork. The game's development was difficult. late changes to software forced the developers to abandon completed code and assets; a focus on high-quality graphics and sound meant that the game ran poorly on some computer systems; and the original scope of the game exceeded the game's schedule and budget, forcing the team to cancel planned features. The game received a mixed critical response; reviewers praised its graphics and its multiplayer functionality, but were polarized by the quality of the story and combat. It received the 1999 Game Critics Awards for Best Role-Playing game. Redemption was released for Microsoft Windows on June 7, 2000, with a Mac OS version following in November 2001. It was successful enough to merit the production of a sequel, Vampire. The Masquerade – Bloodlines, which was released in November 2004 as an indirect sequel set in the same fictional universe."}}
+Completed 500 Internal Server Error in 75283ms
+
+RuntimeError (java.lang.OutOfMemoryError: Java heap space):
+  actionpack (4.1.5) lib/action_controller/metal/rescue.rb:32:in `rescue in process_action'
+  actionpack (4.1.5) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.5) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.1.5) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.5) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.5) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.5) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.5) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.1.5) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.1.5) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.5) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.5) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.5) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.5) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.5) lib/action_dispatch/routing/route_set.rb:82:in `call'
+  actionpack (4.1.5) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.5) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.5) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.1.5) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.5) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.5) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:35:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.5) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.5) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.5) lib/rails/engine.rb:514:in `call'
+  railties (4.1.5) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.6ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (99.2ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.6ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (364.3ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-07 16:51:49 -0400
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"After a blockbuster detour with Furious 7, director James Wan returns to his horror roots for like the fifth time in his career with The Conjuring 2, which follows Conju-Uno‘s Ed and Lorraine Warren into their next really true scary case. The original 2013 film was a Certified Fresh smash for Wan and company, notable because it’s rare for horror movies to get Fresh Tomatometer scores, and even rarer for their franchise sequels. So the fact Conjuring 2 is drawing almost the same praise as its predecessor…well, that inspires this week’s gallery. 24 best-reviewed horror sequels!", "rubric"=>"rate the content", "submission"=>"Redemption is presented in the first- and third-person perspectives. The player controls Christof and up to three allies through a linear structure, providing the player with missions to progress through a set narrative. Certain actions committed by Christof throughout the game can raise or lower his humanity, affecting which of the game's three endings the player receives. As a Vampire, Christof is imbued with a variety of abilities and powers that can be used to combat or avoid enemies and obstacles. Use of these abilities drains Christof's supply of blood which can be replenished by drinking from enemies or innocents. It includes multiplayer gameplay called Storyteller, which allows one player to create a narrative for a group of players with the ability to modify the game dynamically in reaction to the players' actions. Founded in March 1998, Nihilistic's twelve-man team began development of Redemption the following month as their first game. It took the team twenty-four months to complete on a budget of US$1.8 million. The team relied on eight outside contractors to provide elements that the team could not supply, such as music and artwork. The game's development was difficult. late changes to software forced the developers to abandon completed code and assets; a focus on high-quality graphics and sound meant that the game ran poorly on some computer systems; and the original scope of the game exceeded the game's schedule and budget, forcing the team to cancel planned features. The game received a mixed critical response; reviewers praised its graphics and its multiplayer functionality, but were polarized by the quality of the story and combat. It received the 1999 Game Critics Awards for Best Role-Playing game. Redemption was released for Microsoft Windows on June 7, 2000, with a Mac OS version following in November 2001. It was successful enough to merit the production of a sequel, Vampire. The Masquerade – Bloodlines, which was released in November 2004 as an indirect sequel set in the same fictional universe.", "metareviewgenerator"=>{"reviews"=>"After a blockbuster detour with Furious 7, director James Wan returns to his horror roots for like the fifth time in his career with The Conjuring 2, which follows Conju-Uno‘s Ed and Lorraine Warren into their next really true scary case. The original 2013 film was a Certified Fresh smash for Wan and company, notable because it’s rare for horror movies to get Fresh Tomatometer scores, and even rarer for their franchise sequels. So the fact Conjuring 2 is drawing almost the same praise as its predecessor…well, that inspires this week’s gallery. 24 best-reviewed horror sequels!", "rubric"=>"rate the content", "submission"=>"Redemption is presented in the first- and third-person perspectives. The player controls Christof and up to three allies through a linear structure, providing the player with missions to progress through a set narrative. Certain actions committed by Christof throughout the game can raise or lower his humanity, affecting which of the game's three endings the player receives. As a Vampire, Christof is imbued with a variety of abilities and powers that can be used to combat or avoid enemies and obstacles. Use of these abilities drains Christof's supply of blood which can be replenished by drinking from enemies or innocents. It includes multiplayer gameplay called Storyteller, which allows one player to create a narrative for a group of players with the ability to modify the game dynamically in reaction to the players' actions. Founded in March 1998, Nihilistic's twelve-man team began development of Redemption the following month as their first game. It took the team twenty-four months to complete on a budget of US$1.8 million. The team relied on eight outside contractors to provide elements that the team could not supply, such as music and artwork. The game's development was difficult. late changes to software forced the developers to abandon completed code and assets; a focus on high-quality graphics and sound meant that the game ran poorly on some computer systems; and the original scope of the game exceeded the game's schedule and budget, forcing the team to cancel planned features. The game received a mixed critical response; reviewers praised its graphics and its multiplayer functionality, but were polarized by the quality of the story and combat. It received the 1999 Game Critics Awards for Best Role-Playing game. Redemption was released for Microsoft Windows on June 7, 2000, with a Mac OS version following in November 2001. It was successful enough to merit the production of a sequel, Vampire. The Masquerade – Bloodlines, which was released in November 2004 as an indirect sequel set in the same fictional universe."}}
+Completed 500 Internal Server Error in 67726ms
+
+RuntimeError (java.lang.OutOfMemoryError: Java heap space):
+  actionpack (4.1.5) lib/action_controller/metal/rescue.rb:32:in `rescue in process_action'
+  actionpack (4.1.5) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.5) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.1.5) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.5) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.5) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.5) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.5) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.1.5) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.1.5) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.5) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.5) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.5) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.5) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.5) lib/action_dispatch/routing/route_set.rb:82:in `call'
+  actionpack (4.1.5) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.5) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.5) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.1.5) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.5) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.5) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:35:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.5) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.5) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.5) lib/rails/engine.rb:514:in `call'
+  railties (4.1.5) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.6ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (359.0ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-08 10:16:39 -0400
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"After a blockbuster detour with Furious 7, director James Wan returns to his horror roots for like the fifth time in his career with The Conjuring 2, which follows Conju-Uno‘s Ed and Lorraine Warren into their next really true scary case. The original 2013 film was a Certified Fresh smash for Wan and company, notable because it’s rare for horror movies to get Fresh Tomatometer scores, and even rarer for their franchise sequels. So the fact Conjuring 2 is drawing almost the same praise as its predecessor…well, that inspires this week’s gallery. 24 best-reviewed horror sequels!", "rubric"=>"rate the content", "submission"=>"Redemption is presented in the first- and third-person perspectives. The player controls Christof and up to three allies through a linear structure, providing the player with missions to progress through a set narrative. Certain actions committed by Christof throughout the game can raise or lower his humanity, affecting which of the game's three endings the player receives. As a Vampire, Christof is imbued with a variety of abilities and powers that can be used to combat or avoid enemies and obstacles. Use of these abilities drains Christof's supply of blood which can be replenished by drinking from enemies or innocents. It includes multiplayer gameplay called Storyteller, which allows one player to create a narrative for a group of players with the ability to modify the game dynamically in reaction to the players' actions. Founded in March 1998, Nihilistic's twelve-man team began development of Redemption the following month as their first game. It took the team twenty-four months to complete on a budget of US$1.8 million. The team relied on eight outside contractors to provide elements that the team could not supply, such as music and artwork. The game's development was difficult. late changes to software forced the developers to abandon completed code and assets; a focus on high-quality graphics and sound meant that the game ran poorly on some computer systems; and the original scope of the game exceeded the game's schedule and budget, forcing the team to cancel planned features. The game received a mixed critical response; reviewers praised its graphics and its multiplayer functionality, but were polarized by the quality of the story and combat. It received the 1999 Game Critics Awards for Best Role-Playing game. Redemption was released for Microsoft Windows on June 7, 2000, with a Mac OS version following in November 2001. It was successful enough to merit the production of a sequel, Vampire. The Masquerade – Bloodlines, which was released in November 2004 as an indirect sequel set in the same fictional universe.", "metareviewgenerator"=>{"reviews"=>"After a blockbuster detour with Furious 7, director James Wan returns to his horror roots for like the fifth time in his career with The Conjuring 2, which follows Conju-Uno‘s Ed and Lorraine Warren into their next really true scary case. The original 2013 film was a Certified Fresh smash for Wan and company, notable because it’s rare for horror movies to get Fresh Tomatometer scores, and even rarer for their franchise sequels. So the fact Conjuring 2 is drawing almost the same praise as its predecessor…well, that inspires this week’s gallery. 24 best-reviewed horror sequels!", "rubric"=>"rate the content", "submission"=>"Redemption is presented in the first- and third-person perspectives. The player controls Christof and up to three allies through a linear structure, providing the player with missions to progress through a set narrative. Certain actions committed by Christof throughout the game can raise or lower his humanity, affecting which of the game's three endings the player receives. As a Vampire, Christof is imbued with a variety of abilities and powers that can be used to combat or avoid enemies and obstacles. Use of these abilities drains Christof's supply of blood which can be replenished by drinking from enemies or innocents. It includes multiplayer gameplay called Storyteller, which allows one player to create a narrative for a group of players with the ability to modify the game dynamically in reaction to the players' actions. Founded in March 1998, Nihilistic's twelve-man team began development of Redemption the following month as their first game. It took the team twenty-four months to complete on a budget of US$1.8 million. The team relied on eight outside contractors to provide elements that the team could not supply, such as music and artwork. The game's development was difficult. late changes to software forced the developers to abandon completed code and assets; a focus on high-quality graphics and sound meant that the game ran poorly on some computer systems; and the original scope of the game exceeded the game's schedule and budget, forcing the team to cancel planned features. The game received a mixed critical response; reviewers praised its graphics and its multiplayer functionality, but were polarized by the quality of the story and combat. It received the 1999 Game Critics Awards for Best Role-Playing game. Redemption was released for Microsoft Windows on June 7, 2000, with a Mac OS version following in November 2001. It was successful enough to merit the production of a sequel, Vampire. The Masquerade – Bloodlines, which was released in November 2004 as an indirect sequel set in the same fictional universe."}}
+Completed 500 Internal Server Error in 74393ms
+
+RuntimeError (java.lang.OutOfMemoryError: Java heap space):
+  actionpack (4.1.5) lib/action_controller/metal/rescue.rb:32:in `rescue in process_action'
+  actionpack (4.1.5) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.5) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.1.5) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.5) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.5) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.5) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.5) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.1.5) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.1.5) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.5) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.5) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.5) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.5) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.5) lib/action_dispatch/routing/route_set.rb:82:in `call'
+  actionpack (4.1.5) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.5) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.5) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.1.5) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.5) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.5) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:35:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.5) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.5) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.5) lib/rails/engine.rb:514:in `call'
+  railties (4.1.5) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (191.6ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (31.9ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (16.2ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (561.4ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-08 10:18:17 -0400
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"So the fact Conjuring 2 is drawing almost the same praise as its predecessor…well, that inspires this week’s gallery. 24 best-reviewed horror sequels!", "rubric"=>"rate the content", "submission"=>"Redemption is presented in the first- and third-person perspectives.", "metareviewgenerator"=>{"reviews"=>"So the fact Conjuring 2 is drawing almost the same praise as its predecessor…well, that inspires this week’s gallery. 24 best-reviewed horror sequels!", "rubric"=>"rate the content", "submission"=>"Redemption is presented in the first- and third-person perspectives."}}
+  [1m[35mPositiveWord Load (18.5ms)[0m  SELECT `positive_words`.* FROM `positive_words`
+  [1m[36mNegativeWord Load (0.9ms)[0m  [1mSELECT `negative_words`.* FROM `negative_words`[0m
+Completed 200 OK in 30646ms (Views: 0.3ms | ActiveRecord: 19.3ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-08 10:21:00 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (31.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"So the fact Conjuring 2 is drawing almost the same praise as its predecessor…well, that inspires this week’s gallery. 24 best-reviewed horror sequels!", "rubric"=>"rate the content", "submission"=>"Redemption is presented in the first- and third-person perspectives.", "metareviewgenerator"=>{"reviews"=>"So the fact Conjuring 2 is drawing almost the same praise as its predecessor…well, that inspires this week’s gallery. 24 best-reviewed horror sequels!", "rubric"=>"rate the content", "submission"=>"Redemption is presented in the first- and third-person perspectives."}}
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-08 10:38:44 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (12.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"So the fact Conjuring 2 is drawing almost the same praise as its predecessor…well, that inspires this week’s gallery. 24 best-reviewed horror sequels!", "rubric"=>"rate the content", "submission"=>"Redemption is presented in the first- and third-person perspectives.", "metareviewgenerator"=>{"reviews"=>"So the fact Conjuring 2 is drawing almost the same praise as its predecessor…well, that inspires this week’s gallery. 24 best-reviewed horror sequels!", "rubric"=>"rate the content", "submission"=>"Redemption is presented in the first- and third-person perspectives."}}
+Completed 500 Internal Server Error in 87150ms
+
+NameError (undefined local variable or method `beginning_time' for #<WordnetBasedSimilarity:0x007fcc01a27180 @match=0, @count=0>):
+  app/models/wordnet_based_similarity.rb:316:in `get_relations_for_review_submission_tokens'
+  app/models/wordnet_based_similarity.rb:66:in `block in compare_strings'
+  app/models/wordnet_based_similarity.rb:41:in `compare_strings'
+  app/models/degree_of_relevance.rb:117:in `block (2 levels) in compare_vertices'
+  app/models/degree_of_relevance.rb:106:in `block in compare_vertices'
+  app/models/degree_of_relevance.rb:96:in `compare_vertices'
+  app/models/degree_of_relevance.rb:46:in `get_relevance'
+  app/models/automated_metareview.rb:254:in `calculate_metareview_metrics'
+  app/controllers/metareviewgenerator_controller.rb:53:in `block in create'
+  app/controllers/metareviewgenerator_controller.rb:47:in `create'
+
+
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.3ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (164.1ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-08 10:43:36 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (23.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"So the fact Conjuring 2 is drawing almost the same praise as its predecessor…well, that inspires this week’s gallery. 24 best-reviewed horror sequels!", "rubric"=>"rate the content", "submission"=>"Redemption is presented in the first- and third-person perspectives.", "metareviewgenerator"=>{"reviews"=>"So the fact Conjuring 2 is drawing almost the same praise as its predecessor…well, that inspires this week’s gallery. 24 best-reviewed horror sequels!", "rubric"=>"rate the content", "submission"=>"Redemption is presented in the first- and third-person perspectives."}}
+  [1m[35mPositiveWord Load (9.3ms)[0m  SELECT `positive_words`.* FROM `positive_words`
+  [1m[36mNegativeWord Load (3.6ms)[0m  [1mSELECT `negative_words`.* FROM `negative_words`[0m
+Completed 200 OK in 52126ms (Views: 0.2ms | ActiveRecord: 12.9ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-08 11:15:15 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (32.9ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"this is a submission", "rubric"=>"rate the content", "submission"=>"submission", "metareviewgenerator"=>{"reviews"=>"this is a submission", "rubric"=>"rate the content", "submission"=>"submission"}}
+  [1m[35mPositiveWord Load (4.3ms)[0m  SELECT `positive_words`.* FROM `positive_words`
+  [1m[36mNegativeWord Load (1.0ms)[0m  [1mSELECT `negative_words`.* FROM `negative_words`[0m
+Completed 200 OK in 5638ms (Views: 0.2ms | ActiveRecord: 5.3ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-08 11:17:29 -0400
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"this is a submission", "rubric"=>"rate the content", "submission"=>"submission", "metareviewgenerator"=>{"reviews"=>"this is a submission", "rubric"=>"rate the content", "submission"=>"submission"}}
+  [1m[35mPositiveWord Load (0.4ms)[0m  SELECT `positive_words`.* FROM `positive_words`
+  [1m[36mNegativeWord Load (0.2ms)[0m  [1mSELECT `negative_words`.* FROM `negative_words`[0m
+Completed 200 OK in 1239ms (Views: 0.1ms | ActiveRecord: 0.6ms)

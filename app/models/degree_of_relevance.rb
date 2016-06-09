@@ -27,7 +27,9 @@ def get_relevance(reviews, submissions, num_reviews, pos_tagger, core_NLP_tagger
     #since Reviews and Submissions "should" contain the same number of records review - submission pairs
     g = GraphGenerator.new
     #generating review's graph
+    beginning_time = Time.now
     g.generate_graph(reviews, pos_tagger, core_NLP_tagger, true, false)
+
     review_vertices = g.vertices
     review_edges = g.edges
     num_rev_vert = g.num_vertices
@@ -38,6 +40,9 @@ def get_relevance(reviews, submissions, num_reviews, pos_tagger, core_NLP_tagger
 
     #generating the submission's graph
     g.generate_graph(submissions, pos_tagger, core_NLP_tagger, true, false)
+    end_time = Time.now
+    plagiarism_time = end_time - beginning_time
+    puts "************* generate graph time taken - #{plagiarism_time}"
     subm_vertices = g.vertices
     subm_edges = g.edges
     num_sub_vert = g.num_vertices

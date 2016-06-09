@@ -20,16 +20,16 @@ require 'review_coverage'
 class MetareviewgeneratorController < ApplicationController
   skip_before_filter  :verify_authenticity_token
   respond_to :json
-  swagger_controller :Metareviewgenerator, 'Post'
-  swagger_api :create do
-    summary='This method is used to generate all the metareview metrics. The method accepts artifact, review, and rubrics. Returned type is json based metric collection'
-    notes=''
+  # swagger_controller :Metareviewgenerator, 'Post'
+  #   swagger_api :create do
+  #     summary='This method is used to generate all the metareview metrics. The method accepts artifact, review, and rubrics. Returned type is json based metric collection'
+  #     notes=''
+  #
+  #   end
+  #   swagger_api :tone do
+  #     summary='This method is used to generator metareview metric tone.'
+  #end
 
-  end
-  swagger_api :tone do
-    summary='This method is used to generator metareview metric tone.'
-
-  end
   def create
     review_array=Array.new
     submission_array=Array.new
@@ -55,6 +55,7 @@ class MetareviewgeneratorController < ApplicationController
       render json: features.to_json
     end
   end
+
   def tone
     puts 'came to tone'
     review_array=Array.new
@@ -71,6 +72,7 @@ class MetareviewgeneratorController < ApplicationController
       render json: features.to_json
     end
   end
+
   def content
     review_array=Array.new
     submission=Array.new
@@ -87,12 +89,12 @@ class MetareviewgeneratorController < ApplicationController
       render json: features.to_json
     end
   end
+
   def plagiarism
     review_array=Array.new
     submission_array=Array.new
     rubricqns_array=Array.new
     review_array[0]=params[:reviews]
-
 
 
     submission_array[0] = params[:submission]
@@ -108,6 +110,7 @@ class MetareviewgeneratorController < ApplicationController
       render json: features.to_json
     end
   end
+
   def volume
     review_array=Array.new
     review_array[0] = params[:reviews]
@@ -140,6 +143,7 @@ class MetareviewgeneratorController < ApplicationController
       render json: features.to_json
     end
   end
+
   def relevance
     review_array=Array.new
     submission=Array.new

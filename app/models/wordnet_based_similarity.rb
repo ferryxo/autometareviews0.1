@@ -5,7 +5,8 @@ require 'engtagger'
 
 class WordnetBasedSimilarity
   attr_accessor :match, :count
-  @@posTagger = EngTagger.new  
+  @@posTagger = EngTagger.new
+
   def compare_strings(review_vertex, subm_vertex, speller)
     #must fix this to something that is local to the app
     # WordNet::WordNetDB.path = "/usr/local/WordNet-3.0"
@@ -243,7 +244,9 @@ def get_relations_for_review_submission_tokens(token, stem, pos)
       else
         def_arr << nil
       end
-      
+
+      beginning_time = Time.now
+
       #looking for all relations synonym, hypernym, hyponym etc. from among this synset
       #synonyms
       begin #error handling for lemmas's without synsets that throw errors! (likely due to the dictionary file we are using)
@@ -307,9 +310,15 @@ def get_relations_for_review_submission_tokens(token, stem, pos)
         end
       rescue
         anto_arr << nil
-      end         
+      end
+
+      end_time = Time.now
+      diff_time = end_time - beginning_time
+      puts "*************  query wordnet for syn, hyper, hypo, ant of #{lemma_synset} - duration #{diff_time}"
+
     end #end of the for loop for g  
   end #end of checking if the lemma is nil or empty
+
 
   #setting the array elements before returning the array
   relations << def_arr

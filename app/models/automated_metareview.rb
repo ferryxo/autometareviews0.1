@@ -18,6 +18,7 @@ require 'constants'
 require 'review_coverage'
 
 class Automated_Metareview
+
   attr_accessor :review_array
 
   #quantity metric generator
@@ -40,7 +41,7 @@ class Automated_Metareview
     feature_values = Hash.new
 
     pos_tagger = EngTagger.new
-    core_NLP_tagger =  StanfordCoreNLP.load(:tokenize, :ssplit, :pos, :lemma, :parse, :ner, :dcoref)
+    #CORE_NLP_TAGGER =  StanfordCoreNLP.load(:tokenize, :ssplit, :pos, :lemma, :parse, :ner, :dcoref)
     speller = FFI::Aspell::Speller.new('en_US')
 
     preprocess = TextPreprocessing.new
@@ -55,7 +56,7 @@ class Automated_Metareview
 
     degree_relevance = DegreeOfRelevance.new
     tone_array = Array.new
-    tone_array = tone.identify_tone_no_review_graph(pos_tagger, speller, core_NLP_tagger, review)
+    tone_array = tone.identify_tone_no_review_graph(pos_tagger, speller, CORE_NLP_TAGGER, review)
     feature_values["tone_positive"] = tone_array[0]#* 10000).round.to_f/10000
     feature_values["tone_negative"] = tone_array[1]#* 10000).round.to_f/10000
     feature_values["tone_neutral"] = tone_array[2]#* 10000).round.to_f/10000
@@ -65,7 +66,7 @@ class Automated_Metareview
   def calculate_metareview_metric_content(review)
     preprocess = TextPreprocessing.new
     pos_tagger = EngTagger.new
-    core_NLP_tagger =  StanfordCoreNLP.load(:tokenize, :ssplit, :pos, :lemma, :parse, :ner, :dcoref)
+    #core_NLP_tagger =  StanfordCoreNLP.load(:tokenize, :ssplit, :pos, :lemma, :parse, :ner, :dcoref)
     g = GraphGenerator.new
 
     feature_values=Hash.new
@@ -78,13 +79,13 @@ class Automated_Metareview
       review_text = preprocess.remove_text_within_quotes(review_text) #review_text is an array
 
       #generating review's graph
-      g.generate_graph(review_text, pos_tagger, core_NLP_tagger, true, false)
+      g.generate_graph(review_text, pos_tagger, CORE_NLP_TAGGER, true, false)
       review_graph = g.clone
       
       content_instance = PredictClass.new
       pattern_files_array = ["app/data/patterns-assess.csv","app/data/patterns-prob-detect.csv","app/data/patterns-suggest.csv"]
       #predcting class - last parameter is the number of classes
-      content_probs = content_instance.predict_classes(pos_tagger, core_NLP_tagger, review_text, review_graph, pattern_files_array, pattern_files_array.length)
+      content_probs = content_instance.predict_classes(pos_tagger, CORE_NLP_TAGGER, review_text, review_graph, pattern_files_array, pattern_files_array.length)
       content = "SUMMATIVE - #{(content_probs[0] * 10000).round.to_f/10000}, PROBLEM - #{(content_probs[1] * 10000).round.to_f/10000}, SUGGESTION - #{(content_probs[2] * 10000).round.to_f/10000}"
       content_summative = content_probs[0]# * 10000).round.to_f/10000
       content_problem = content_probs[1] #* 10000).round.to_f/10000
@@ -136,9 +137,9 @@ class Automated_Metareview
 
 
       pos_tagger = EngTagger.new
-      core_NLP_tagger =  StanfordCoreNLP.load(:tokenize, :ssplit, :pos, :lemma, :parse, :ner, :dcoref)
+      #core_NLP_tagger =  StanfordCoreNLP.load(:tokenize, :ssplit, :pos, :lemma, :parse, :ner, :dcoref)
       cover = ReviewCoverage.new
-      coverage = cover.calculate_coverage(subm_text, review_text, pos_tagger, core_NLP_tagger, speller)
+      coverage = cover.calculate_coverage(subm_text, review_text, pos_tagger, CORE_NLP_TAGGER, speller)
       feature_values["coverage"]=coverage
     end
     return feature_values
@@ -161,9 +162,9 @@ class Automated_Metareview
       subm_text = preprocess.remove_text_within_quotes(subm_text)
 
       pos_tagger = EngTagger.new
-      core_NLP_tagger =  StanfordCoreNLP.load(:tokenize, :ssplit, :pos, :lemma, :parse, :ner, :dcoref)
+      #core_NLP_tagger =  StanfordCoreNLP.load(:tokenize, :ssplit, :pos, :lemma, :parse, :ner, :dcoref)
       relev = DegreeOfRelevance.new
-      relevance = relev.get_relevance(review_text, subm_text, 1, pos_tagger, core_NLP_tagger, speller) #1 indicates the number of reviews
+      relevance = relev.get_relevance(review_text, subm_text, 1, pos_tagger, CORE_NLP_TAGGER, speller) #1 indicates the number of reviews
       feature_values["relevance"]=relevance
     end
     return feature_values
@@ -242,13 +243,15 @@ class Automated_Metareview
       puts "subm_text #{subm_text}"
       # #initializing the pos tagger and nlp tagger/semantic parser  
       pos_tagger = EngTagger.new
-      core_NLP_tagger =  StanfordCoreNLP.load(:tokenize, :ssplit, :pos, :lemma, :parse, :ner, :dcoref)
+
+      #todo pre load on start
+      #core_NLP_tagger =  StanfordCoreNLP.load(:tokenize, :ssplit, :pos, :lemma, :parse, :ner, :dcoref)
       
       #---------    
       #relevance
       beginning_time = Time.now
       relev = DegreeOfRelevance.new
-      relevance = relev.get_relevance(review_text, subm_text, 1, pos_tagger, core_NLP_tagger, speller) #1 indicates the number of reviews
+      relevance = relev.get_relevance(review_text, subm_text, 1, pos_tagger, CORE_NLP_TAGGER, speller) #1 indicates the number of reviews
       #assigninging the graph generated for the review to the class variable, in order to reuse it for content classification
       review_graph = relev.review
       #calculating end time
@@ -272,9 +275,12 @@ class Automated_Metareview
       #content
       beginning_time = Time.now
       content_instance = PredictClass.new
+
+      #todo pre load on start
       pattern_files_array = ["app/data/patterns-assess.csv","app/data/patterns-prob-detect.csv","app/data/patterns-suggest.csv"]
+
       #predcting class - last parameter is the number of classes
-      content_probs = content_instance.predict_classes(pos_tagger, core_NLP_tagger, review_text, review_graph, pattern_files_array, pattern_files_array.length)
+      content_probs = content_instance.predict_classes(pos_tagger, CORE_NLP_TAGGER, review_text, review_graph, pattern_files_array, pattern_files_array.length)
       content = "SUMMATIVE - #{(content_probs[0] * 10000).round.to_f/10000}, PROBLEM - #{(content_probs[1] * 10000).round.to_f/10000}, SUGGESTION - #{(content_probs[2] * 10000).round.to_f/10000}"
       end_time = Time.now
       content_time = end_time - beginning_time
@@ -284,13 +290,14 @@ class Automated_Metareview
       feature_values["content_summative"] = content_summative
       feature_values["content_problem"] = content_problem
       feature_values["content_advisory"] = content_advisory
-      return feature_values
+
       puts "************* content time taken - #{content_time}"
+
 #      puts "*************"
       #---------    
       #coverage
       cover = ReviewCoverage.new
-      coverage = cover.calculate_coverage(subm_text, review_text, pos_tagger, core_NLP_tagger, speller)
+      coverage = cover.calculate_coverage(subm_text, review_text, pos_tagger, CORE_NLP_TAGGER, speller)
 #      puts "************* coverage - #{coverage}"
 #      puts "*************"
       #---------    
@@ -298,7 +305,7 @@ class Automated_Metareview
       beginning_time = Time.now
       ton = Tone.new
       tone_array = Array.new
-      tone_array = ton.identify_tone(pos_tagger, speller, core_NLP_tagger, review_text, review_graph)
+      tone_array = ton.identify_tone(pos_tagger, speller, CORE_NLP_TAGGER, review_text, review_graph)
       tone_positive = tone_array[0]#* 10000).round.to_f/10000
       tone_negative = tone_array[1]#* 10000).round.to_f/10000
       tone_neutral = tone_array[2]#* 10000).round.to_f/10000

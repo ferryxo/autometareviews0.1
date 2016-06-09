@@ -16,6 +16,8 @@ def predict_classes(pos_tagger, core_NLP_tagger, review_text, review_graph, patt
   
   tc = TextPreprocessing.new
   single_patterns = Array.new(num_classes){Array.new}
+
+  #todo pre load on start
   #reading the patterns from each of the pattern files
   for i in (0..num_classes - 1) #for every class
     #read_patterns in TextPreprocessing helps read patterns in the format 'X = Y'
@@ -28,15 +30,15 @@ def predict_classes(pos_tagger, core_NLP_tagger, review_text, review_graph, patt
   class_value = 0          
   edges = review_graph.edges
 #  puts "review_graph.num_edges #{review_graph.num_edges}"
-  
-  class_prob = Array.new #contains the probabilities for each of the classes - it contains 3 rows for the 3 classes    
+  class_prob = Array.new #contains the probabilities for each of the classes - it contains 3 rows for the 3 classes
   #comparing each test review text with patterns from each of the classes
-  for k in (0..num_classes - 1)
-    #comparing edges with patterns from a particular class
-    class_prob[k] = compare_review_with_patterns(edges, single_patterns[k], wordnet)/6.to_f #normalizing the result 
-    #we divide the match by 6 to ensure the value is in the range of [0-1]     
+  single_patterns.each_with_index do |pattern, index|
+      index_temp = index
+      #comparing edges with patterns from a particular class
+      class_prob[index_temp] = compare_review_with_patterns(edges, pattern, wordnet)/6.to_f #normalizing the result
+      #we divide the match by 6 to ensure the value is in the range of [0-1]
   end #end of for loop for the classes          
-  
+
   #printing the probability values
 #  puts("########## Probability for test review:: "+review_text[0]+" is::")  
 #  for k in (0..num_classes - 1)
@@ -56,21 +58,27 @@ def compare_review_with_patterns(single_edges, single_patterns, wordnet)
       single_edges[i].average_match = 0
     end  
   end
-  
+
+  threads=[]
   #comparing each single edge with all the patterns
-  puts(single_edges.length)
-  puts single_patterns.length
+  puts "edges length : " + single_edges.length.to_s
+  puts "pattern length : " + single_patterns.length.to_s
   for i in (0..single_edges.length - 1)  #iterating through the single edges
     max_match = 0
     if(!single_edges[i].nil?)
-      for j in (0..single_patterns.length - 1) 
+      for j in (0..single_patterns.length - 1)
         if(!single_patterns[j].nil?)
-          single_edge_matches[i][j] = compare_edges(single_edges[i], single_patterns[j], wordnet)
-          if(single_edge_matches[i][j] > max_match)
-            max_match = single_edge_matches[i][j]
-          end 
+          threads << Thread.new do
+            i_temp = i
+            j_temp = j
+            single_edge_matches[i_temp][j_temp] = compare_edges(single_edges[i_temp], single_patterns[j_temp], wordnet)
+            if(single_edge_matches[i_temp][j_temp] > max_match)
+              max_match = single_edge_matches[i_temp][j_temp]
+            end
+          end
         end 
       end #end of for loop for the patterns
+
       single_edges[i].average_match = max_match  
       
       #calculating class average
@@ -80,11 +88,15 @@ def compare_review_with_patterns(single_edges, single_patterns, wordnet)
       end
     end #end of the if condition
   end #end of for loop
-  
+
+  # Wait for all threads to end
+  threads.each {|t| t.join}
+
   if(final_edge_num == 0)
     final_edge_num = 1  
   end
-  
+
+
   # puts("final_class_sum:: #{final_class_sum} final_edge_num:: #{final_edge_num} Class average #{final_class_sum/final_edge_num}")
   return final_class_sum/final_edge_num #maxMatch
 end #end of determineClass method
@@ -114,6 +126,7 @@ def compare_edges(e1, e2, wordnet)
   # elsif(!e1.out_vertex.pos_tag.include?("NN"))
     # avg_match_with_syntax = wordnet.compare_strings(e1.out_vertex, e2.in_vertex, speller)
   # end
+
   
   if(avg_match_without_syntax > avg_match_with_syntax)
     return avg_match_without_syntax
