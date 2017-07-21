@@ -64,6 +64,7 @@ GEM
     mysql2 (0.3.18)
     polyglot (0.3.5)
     rack (1.5.2)
+    rack-cors (1.0.1)
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (4.1.5)
@@ -81,7 +82,7 @@ GEM
       activesupport (= 4.1.5)
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
-    rake (10.4.2)
+    rake (11.2.2)
     rdoc (4.2.0)
       json (~> 1.4)
     rjb (1.4.9)
@@ -133,6 +134,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   mysql2
+  rack-cors
   rails (= 4.1.5)
   rjb (= 1.4.9)
   rwordnet

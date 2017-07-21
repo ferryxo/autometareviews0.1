@@ -34,7 +34,7 @@ class MetareviewgeneratorController < ApplicationController
     review_array=Array.new
     submission_array=Array.new
     rubricqns_array=Array.new
-    review_array[0] = params[:reviews]
+    review_array[0] = params[:review]
     submission_array[0] = params[:submission]
     rubricqns_array[0] = params[:rubric]
 
@@ -59,7 +59,7 @@ class MetareviewgeneratorController < ApplicationController
   def tone
     puts 'came to tone'
     review_array=Array.new
-    review_array[0] = params[:reviews]
+    review_array[0] = params[:review]
     puts review_array
 
     #iterate over each input and generate output
@@ -76,7 +76,7 @@ class MetareviewgeneratorController < ApplicationController
   def content
     review_array=Array.new
     submission=Array.new
-    review_array[0] = params[:reviews]
+    review_array[0] = params[:review]
     
 
     #iterate over each input and generate output
@@ -94,7 +94,7 @@ class MetareviewgeneratorController < ApplicationController
     review_array=Array.new
     submission_array=Array.new
     rubricqns_array=Array.new
-    review_array[0]=params[:reviews]
+    review_array[0]=params[:review]
 
 
     submission_array[0] = params[:submission]
@@ -113,7 +113,7 @@ class MetareviewgeneratorController < ApplicationController
 
   def volume
     review_array=Array.new
-    review_array[0] = params[:reviews]
+    review_array[0] = params[:review]
     puts review_array[0]
 
     #iterate over each input and generate output
@@ -129,7 +129,7 @@ class MetareviewgeneratorController < ApplicationController
   def coverage
     review_array=Array.new
     submission=Array.new
-    review_array[0] = params[:reviews]
+    review_array[0] = params[:review]
     submission[0]=params[:submission]
     puts review_array
 
@@ -147,7 +147,7 @@ class MetareviewgeneratorController < ApplicationController
   def relevance
     review_array=Array.new
     submission=Array.new
-    review_array[0] = params[:reviews]
+    review_array[0] = params[:review]
     submission[0]=params[:submission]
 
     #iterate over each input and generate output

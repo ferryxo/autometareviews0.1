@@ -67,8 +67,8 @@ def compare_review_with_patterns(single_edges, single_patterns, wordnet)
     max_match = 0
     if(!single_edges[i].nil?)
       for j in (0..single_patterns.length - 1)
-        if(!single_patterns[j].nil?)
-          threads << Thread.new do
+        threads << Thread.new do
+          if(!single_patterns[j].nil?)
             i_temp = i
             j_temp = j
             single_edge_matches[i_temp][j_temp] = compare_edges(single_edges[i_temp], single_patterns[j_temp], wordnet)
@@ -76,7 +76,7 @@ def compare_review_with_patterns(single_edges, single_patterns, wordnet)
               max_match = single_edge_matches[i_temp][j_temp]
             end
           end
-        end 
+        end
       end #end of for loop for the patterns
 
       single_edges[i].average_match = max_match  
@@ -90,7 +90,7 @@ def compare_review_with_patterns(single_edges, single_patterns, wordnet)
   end #end of for loop
 
   # Wait for all threads to end
-  threads.each {|t| t.join}
+  #threads.each {|t| t.join}
 
   if(final_edge_num == 0)
     final_edge_num = 1  

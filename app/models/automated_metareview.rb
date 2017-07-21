@@ -36,6 +36,7 @@ class Automated_Metareview
     feature_values["volume"]=quantity
     return feature_values
   end
+
   #tone metric generator
   def calculate_metareview_metric_tone(review)
     feature_values = Hash.new
@@ -62,6 +63,7 @@ class Automated_Metareview
     feature_values["tone_neutral"] = tone_array[2]#* 10000).round.to_f/10000
     return feature_values
   end
+
   #content metric generator
   def calculate_metareview_metric_content(review)
     preprocess = TextPreprocessing.new
@@ -96,6 +98,7 @@ class Automated_Metareview
     end
     return feature_values
   end
+
   #plagiarism metric generator
   def calculate_metareview_metric_plagiarism(review, submission,rubricqns_array)
 
@@ -118,6 +121,7 @@ class Automated_Metareview
     end
     return feature_values
   end
+
   #coverage metric generator
   def calculate_metareview_metric_coverage(review, submission)
     preprocess = TextPreprocessing.new
@@ -144,6 +148,7 @@ class Automated_Metareview
     end
     return feature_values
   end
+
   #relevance metric generator
   def calculate_metareview_metric_relevance(review, submission)
     preprocess = TextPreprocessing.new

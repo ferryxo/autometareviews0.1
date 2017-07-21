@@ -212,20 +212,22 @@ Check for plagiarism after removing text within quotes for reviews
     #iterating through each response
     review_text_array.each{
         |review_text|
-      review_tokens = review_text.split(" ")
-      review_text_temp = ""
-      #iterating through tokens from each response
-      review_tokens.each{
-          |review_tok|
-        #checkiing the stem word's spelling for correctness
-        if(!speller.correct?(review_tok))
-          if(!speller.suggestions(review_tok).first.nil?)
-            review_tok = speller.suggestions(review_tok).first
+      if !review_text.nil?
+        review_tokens = review_text.split(" ")
+        review_text_temp = ""
+        #iterating through tokens from each response
+        review_tokens.each{
+            |review_tok|
+          #checkiing the stem word's spelling for correctness
+          if(!speller.correct?(review_tok))
+            if(!speller.suggestions(review_tok).first.nil?)
+              review_tok = speller.suggestions(review_tok).first
+            end
           end
-        end
-        review_text_temp = review_text_temp +" " + review_tok.downcase
-      }
-      review_text_array_temp << review_text_temp
+          review_text_temp = review_text_temp +" " + review_tok.downcase
+        }
+        review_text_array_temp << review_text_temp
+      end
     }
     return review_text_array_temp
   end

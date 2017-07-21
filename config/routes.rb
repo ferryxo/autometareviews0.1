@@ -2,7 +2,7 @@ Rails.application.routes.draw do
    # get 'metareviewgenerator/AutomatedMetareview'
   #match 'metareviewgenerator', to: 'metareviewgenerator#AutomatedMetareview', via: [:get]
   resource :metareviewgenerator do
-    post 'create', to:'metareviewgenerator#create'
+    post 'all', to:'metareviewgenerator#create'
     post 'tone', to:'metareviewgenerator#tone'
     post 'volume', to:'metareviewgenerator#volume'
     post 'content', to:'metareviewgenerator#content'

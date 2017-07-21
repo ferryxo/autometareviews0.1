@@ -34285,3 +34285,1674 @@ Processing by MetareviewgeneratorController#create as HTML
   [1m[35mPositiveWord Load (0.4ms)[0m  SELECT `positive_words`.* FROM `positive_words`
   [1m[36mNegativeWord Load (0.2ms)[0m  [1mSELECT `negative_words`.* FROM `negative_words`[0m
 Completed 200 OK in 1239ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-10 14:16:41 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (74.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by MetareviewgeneratorController#create as JSON
+  Parameters: {"{\"submission\":\"submission\",\"review\":\"review\",\"rubric\":\"rubric\"}"=>nil}
+Completed 500 Internal Server Error in 157ms
+
+NoMethodError (undefined method `split' for nil:NilClass):
+  app/models/text_preprocessing.rb:215:in `block in check_correct_spellings'
+  app/models/text_preprocessing.rb:213:in `each'
+  app/models/text_preprocessing.rb:213:in `check_correct_spellings'
+  app/models/automated_metareview.rb:186:in `calculate_metareview_metrics'
+  app/controllers/metareviewgenerator_controller.rb:53:in `block in create'
+  app/controllers/metareviewgenerator_controller.rb:47:in `create'
+
+
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (136.7ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-10 14:21:00 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by MetareviewgeneratorController#create as JSON
+  Parameters: {"{\"submission\":\"submission\",\"review\":\"review\",\"rubric\":\"rubric\"}"=>nil}
+Completed 500 Internal Server Error in 41ms
+
+NoMethodError (undefined method `split' for nil:NilClass):
+  app/models/text_preprocessing.rb:215:in `block in check_correct_spellings'
+  app/models/text_preprocessing.rb:213:in `each'
+  app/models/text_preprocessing.rb:213:in `check_correct_spellings'
+  app/models/automated_metareview.rb:186:in `calculate_metareview_metrics'
+  app/controllers/metareviewgenerator_controller.rb:53:in `block in create'
+  app/controllers/metareviewgenerator_controller.rb:47:in `create'
+
+
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (151.3ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-10 14:22:09 -0400
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"this is a submission", "rubric"=>"rate the content", "submission"=>"submission", "metareviewgenerator"=>{"reviews"=>"this is a submission", "rubric"=>"rate the content", "submission"=>"submission"}}
+  [1m[35mPositiveWord Load (2.2ms)[0m  SELECT `positive_words`.* FROM `positive_words`
+  [1m[36mNegativeWord Load (0.7ms)[0m  [1mSELECT `negative_words`.* FROM `negative_words`[0m
+Completed 200 OK in 4353ms (Views: 0.3ms | ActiveRecord: 2.9ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-10 14:25:03 -0400
+Processing by MetareviewgeneratorController#create as JSON
+  Parameters: {"{\"submission\":\"submission\",\"review\":\"review\",\"rubric\":\"rubric\"}"=>nil}
+Completed 500 Internal Server Error in 3ms
+
+NoMethodError (undefined method `split' for nil:NilClass):
+  app/models/text_preprocessing.rb:215:in `block in check_correct_spellings'
+  app/models/text_preprocessing.rb:213:in `each'
+  app/models/text_preprocessing.rb:213:in `check_correct_spellings'
+  app/models/automated_metareview.rb:186:in `calculate_metareview_metrics'
+  app/controllers/metareviewgenerator_controller.rb:53:in `block in create'
+  app/controllers/metareviewgenerator_controller.rb:47:in `create'
+
+
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (181.1ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-10 14:25:23 -0400
+Processing by MetareviewgeneratorController#create as JSON
+  Parameters: {"{\"submission\":\"submission\",\"review\":\"review\",\"rubric\":\"rubric\"}"=>nil}
+Completed 500 Internal Server Error in 3ms
+
+NoMethodError (undefined method `split' for nil:NilClass):
+  app/models/text_preprocessing.rb:215:in `block in check_correct_spellings'
+  app/models/text_preprocessing.rb:213:in `each'
+  app/models/text_preprocessing.rb:213:in `check_correct_spellings'
+  app/models/automated_metareview.rb:186:in `calculate_metareview_metrics'
+  app/controllers/metareviewgenerator_controller.rb:53:in `block in create'
+  app/controllers/metareviewgenerator_controller.rb:47:in `create'
+
+
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.2ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (133.0ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-10 14:34:31 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (3.9ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by MetareviewgeneratorController#create as JSON
+  Parameters: {"{\"submission\":\"submission\",\"review\":\"review\",\"rubric\":\"rubric\"}"=>nil}
+Completed 500 Internal Server Error in 111324ms
+
+NoMethodError (undefined method `split' for nil:NilClass):
+  app/models/text_preprocessing.rb:215:in `block in check_correct_spellings'
+  app/models/text_preprocessing.rb:213:in `each'
+  app/models/text_preprocessing.rb:213:in `check_correct_spellings'
+  app/models/automated_metareview.rb:186:in `calculate_metareview_metrics'
+  app/controllers/metareviewgenerator_controller.rb:53:in `block in create'
+  app/controllers/metareviewgenerator_controller.rb:47:in `create'
+
+
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (13.6ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.1ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.5ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (194.5ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-10 14:36:35 -0400
+Processing by MetareviewgeneratorController#create as JSON
+  Parameters: {"{\"submission\":\"submission\",\"review\":\"review\",\"rubric\":\"rubric\"}"=>nil}
+Completed 500 Internal Server Error in 17027ms
+
+NoMethodError (undefined method `split' for nil:NilClass):
+  app/models/text_preprocessing.rb:215:in `block in check_correct_spellings'
+  app/models/text_preprocessing.rb:213:in `each'
+  app/models/text_preprocessing.rb:213:in `check_correct_spellings'
+  app/models/automated_metareview.rb:186:in `calculate_metareview_metrics'
+  app/controllers/metareviewgenerator_controller.rb:53:in `block in create'
+  app/controllers/metareviewgenerator_controller.rb:47:in `create'
+
+
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.3ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.1ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.4ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (240.0ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-10 14:40:55 -0400
+Processing by MetareviewgeneratorController#create as JSON
+  Parameters: {"{\"reviews\":\"my reviews\",\"rubric\":\"my rubric\",\"submission\":\"my submission\"}"=>nil}
+Completed 500 Internal Server Error in 44300ms
+
+NoMethodError (undefined method `split' for nil:NilClass):
+  app/models/text_preprocessing.rb:215:in `block in check_correct_spellings'
+  app/models/text_preprocessing.rb:213:in `each'
+  app/models/text_preprocessing.rb:213:in `check_correct_spellings'
+  app/models/automated_metareview.rb:186:in `calculate_metareview_metrics'
+  app/controllers/metareviewgenerator_controller.rb:53:in `block in create'
+  app/controllers/metareviewgenerator_controller.rb:47:in `create'
+
+
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.3ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.7ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.0ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (190.6ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-10 14:46:07 -0400
+Processing by MetareviewgeneratorController#create as JSON
+  Parameters: {"{\"reviews\":\"my reviews\",\"rubric\":\"my rubric\",\"submission\":\"my submission\"}"=>nil}
+Completed 500 Internal Server Error in 283845ms
+
+NoMethodError (undefined method `split' for nil:NilClass):
+  app/models/text_preprocessing.rb:215:in `block in check_correct_spellings'
+  app/models/text_preprocessing.rb:213:in `each'
+  app/models/text_preprocessing.rb:213:in `check_correct_spellings'
+  app/models/automated_metareview.rb:186:in `calculate_metareview_metrics'
+  app/controllers/metareviewgenerator_controller.rb:53:in `block in create'
+  app/controllers/metareviewgenerator_controller.rb:47:in `create'
+
+
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (76.8ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (32.9ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (16.0ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (338.4ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-10 14:50:51 -0400
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"this is a submission", "rubric"=>"rate the content", "submission"=>"submission", "metareviewgenerator"=>{"reviews"=>"this is a submission", "rubric"=>"rate the content", "submission"=>"submission"}}
+  [1m[35mPositiveWord Load (1.9ms)[0m  SELECT `positive_words`.* FROM `positive_words`
+  [1m[36mNegativeWord Load (1.7ms)[0m  [1mSELECT `negative_words`.* FROM `negative_words`[0m
+Completed 200 OK in 66752ms (Views: 0.5ms | ActiveRecord: 3.6ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-10 14:53:01 -0400
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"my reviews", "rubric"=>"my rubric", "submission"=>"my submission", "metareviewgenerator"=>{"reviews"=>"my reviews", "rubric"=>"my rubric", "submission"=>"my submission"}}
+  [1m[35mPositiveWord Load (0.4ms)[0m  SELECT `positive_words`.* FROM `positive_words`
+  [1m[36mNegativeWord Load (0.4ms)[0m  [1mSELECT `negative_words`.* FROM `negative_words`[0m
+Completed 200 OK in 28131ms (Views: 0.1ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-10 14:54:42 -0400
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"submission"=>"submission", "review"=>"review", "rubric"=>"rubric", "metareviewgenerator"=>{"submission"=>"submission", "review"=>"review", "rubric"=>"rubric"}}
+Completed 500 Internal Server Error in 6ms
+
+NoMethodError (undefined method `split' for nil:NilClass):
+  app/models/text_preprocessing.rb:215:in `block in check_correct_spellings'
+  app/models/text_preprocessing.rb:213:in `each'
+  app/models/text_preprocessing.rb:213:in `check_correct_spellings'
+  app/models/automated_metareview.rb:186:in `calculate_metareview_metrics'
+  app/controllers/metareviewgenerator_controller.rb:53:in `block in create'
+  app/controllers/metareviewgenerator_controller.rb:47:in `create'
+
+
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (145.2ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-10 14:55:21 -0400
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"submission"=>"submission", "review"=>"review", "rubric"=>"rubric", "metareviewgenerator"=>{"submission"=>"submission", "review"=>"review", "rubric"=>"rubric"}}
+Completed 500 Internal Server Error in 2ms
+
+NoMethodError (undefined method `split' for nil:NilClass):
+  app/models/text_preprocessing.rb:215:in `block in check_correct_spellings'
+  app/models/text_preprocessing.rb:213:in `each'
+  app/models/text_preprocessing.rb:213:in `check_correct_spellings'
+  app/models/automated_metareview.rb:186:in `calculate_metareview_metrics'
+  app/controllers/metareviewgenerator_controller.rb:53:in `block in create'
+  app/controllers/metareviewgenerator_controller.rb:47:in `create'
+
+
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (9.0ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (185.2ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-10 14:55:32 -0400
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"submission"=>"submission", "review"=>"review", "rubric"=>"rubric", "metareviewgenerator"=>{"submission"=>"submission", "review"=>"review", "rubric"=>"rubric"}}
+Completed 500 Internal Server Error in 2ms
+
+NoMethodError (undefined method `split' for nil:NilClass):
+  app/models/text_preprocessing.rb:215:in `block in check_correct_spellings'
+  app/models/text_preprocessing.rb:213:in `each'
+  app/models/text_preprocessing.rb:213:in `check_correct_spellings'
+  app/models/automated_metareview.rb:186:in `calculate_metareview_metrics'
+  app/controllers/metareviewgenerator_controller.rb:53:in `block in create'
+  app/controllers/metareviewgenerator_controller.rb:47:in `create'
+
+
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.5ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (403.4ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-10 14:56:01 -0400
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"submission"=>"submission", "review"=>"review", "rubric"=>"rubric", "metareviewgenerator"=>{"submission"=>"submission", "review"=>"review", "rubric"=>"rubric"}}
+Completed 500 Internal Server Error in 23696ms
+
+NoMethodError (undefined method `split' for nil:NilClass):
+  app/models/text_preprocessing.rb:215:in `block in check_correct_spellings'
+  app/models/text_preprocessing.rb:213:in `each'
+  app/models/text_preprocessing.rb:213:in `check_correct_spellings'
+  app/models/automated_metareview.rb:186:in `calculate_metareview_metrics'
+  app/controllers/metareviewgenerator_controller.rb:53:in `block in create'
+  app/controllers/metareviewgenerator_controller.rb:47:in `create'
+
+
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (234.7ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-10 14:57:09 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (4.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"submission"=>"my submission", "reviews"=>"my reviews", "rubric"=>"my rubric", "metareviewgenerator"=>{"submission"=>"my submission", "reviews"=>"my reviews", "rubric"=>"my rubric"}}
+  [1m[35mPositiveWord Load (0.7ms)[0m  SELECT `positive_words`.* FROM `positive_words`
+  [1m[36mNegativeWord Load (0.8ms)[0m  [1mSELECT `negative_words`.* FROM `negative_words`[0m
+Completed 200 OK in 28177ms (Views: 0.5ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-10 14:59:05 -0400
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"submission"=>"my submission", "reviews"=>"my reviews", "rubric"=>"my rubric", "metareviewgenerator"=>{"submission"=>"my submission", "reviews"=>"my reviews", "rubric"=>"my rubric"}}
+  [1m[35mPositiveWord Load (0.4ms)[0m  SELECT `positive_words`.* FROM `positive_words`
+  [1m[36mNegativeWord Load (0.2ms)[0m  [1mSELECT `negative_words`.* FROM `negative_words`[0m
+Completed 200 OK in 916ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/metareview/metareviewgenerator/create" for 127.0.0.1 at 2016-06-14 15:17:12 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (22.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+
+ActionController::RoutingError (No route matches [POST] "/metareview/metareviewgenerator/create"):
+  actionpack (4.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.5) lib/rails/engine.rb:514:in `call'
+  railties (4.1.5) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (13.3ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (55.8ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (329.4ms)
+
+
+Started POST "/metareview/metareviewgenerator/create" for 127.0.0.1 at 2016-06-14 15:17:41 -0400
+
+ActionController::RoutingError (No route matches [POST] "/metareview/metareviewgenerator/create"):
+  actionpack (4.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.5) lib/rails/engine.rb:514:in `call'
+  railties (4.1.5) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (32.6ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.4ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (248.0ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-14 15:18:04 -0400
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"this is a submission", "rubric"=>"rate the content", "submission"=>"submission", "metareviewgenerator"=>{"reviews"=>"this is a submission", "rubric"=>"rate the content", "submission"=>"submission"}}
+  [1m[35mPositiveWord Load (2.1ms)[0m  SELECT `positive_words`.* FROM `positive_words`
+  [1m[36mNegativeWord Load (1.8ms)[0m  [1mSELECT `negative_words`.* FROM `negative_words`[0m
+Completed 200 OK in 4551ms (Views: 0.8ms | ActiveRecord: 3.8ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-14 15:19:09 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (10.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"this is a submission", "rubric"=>"rate the content", "submission"=>"submission", "metareviewgenerator"=>{"reviews"=>"this is a submission", "rubric"=>"rate the content", "submission"=>"submission"}}
+  [1m[35mPositiveWord Load (11.1ms)[0m  SELECT `positive_words`.* FROM `positive_words`
+  [1m[36mNegativeWord Load (18.9ms)[0m  [1mSELECT `negative_words`.* FROM `negative_words`[0m
+Completed 200 OK in 72877ms (Views: 0.9ms | ActiveRecord: 30.0ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-14 15:20:52 -0400
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"this is a submission", "rubric"=>"rate the content", "submission"=>"test", "metareviewgenerator"=>{"reviews"=>"this is a submission", "rubric"=>"rate the content", "submission"=>"test"}}
+  [1m[35mPositiveWord Load (0.4ms)[0m  SELECT `positive_words`.* FROM `positive_words`
+  [1m[36mNegativeWord Load (0.3ms)[0m  [1mSELECT `negative_words`.* FROM `negative_words`[0m
+Completed 200 OK in 2802ms (Views: 0.1ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-14 15:21:25 -0400
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"submission is being tested", "rubric"=>"rate the content", "submission"=>"test submission", "metareviewgenerator"=>{"reviews"=>"submission is being tested", "rubric"=>"rate the content", "submission"=>"test submission"}}
+  [1m[35mPositiveWord Load (0.4ms)[0m  SELECT `positive_words`.* FROM `positive_words`
+  [1m[36mNegativeWord Load (0.3ms)[0m  [1mSELECT `negative_words`.* FROM `negative_words`[0m
+Completed 200 OK in 4138ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-14 15:22:00 -0400
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"it talks about a submission", "rubric"=>"rate the content", "submission"=>"test submission", "metareviewgenerator"=>{"reviews"=>"it talks about a submission", "rubric"=>"rate the content", "submission"=>"test submission"}}
+  [1m[35mPositiveWord Load (0.5ms)[0m  SELECT `positive_words`.* FROM `positive_words`
+  [1m[36mNegativeWord Load (0.4ms)[0m  [1mSELECT `negative_words`.* FROM `negative_words`[0m
+Completed 200 OK in 7120ms (Views: 0.1ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-14 15:22:54 -0400
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"it talks about a submission", "rubric"=>"rate the content", "submission"=>"test adding submission", "metareviewgenerator"=>{"reviews"=>"it talks about a submission", "rubric"=>"rate the content", "submission"=>"test adding submission"}}
+  [1m[35mPositiveWord Load (10.3ms)[0m  SELECT `positive_words`.* FROM `positive_words`
+  [1m[36mNegativeWord Load (0.4ms)[0m  [1mSELECT `negative_words`.* FROM `negative_words`[0m
+Completed 200 OK in 7219ms (Views: 0.5ms | ActiveRecord: 10.7ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-14 15:23:18 -0400
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"it talks about a submission", "rubric"=>"rate the content", "submission"=>"submission", "metareviewgenerator"=>{"reviews"=>"it talks about a submission", "rubric"=>"rate the content", "submission"=>"submission"}}
+  [1m[35mPositiveWord Load (0.4ms)[0m  SELECT `positive_words`.* FROM `positive_words`
+  [1m[36mNegativeWord Load (0.2ms)[0m  [1mSELECT `negative_words`.* FROM `negative_words`[0m
+Completed 200 OK in 5575ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-14 15:37:00 -0400
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"it talks about a submission", "rubric"=>"rate the content", "submission"=>"submission", "metareviewgenerator"=>{"reviews"=>"it talks about a submission", "rubric"=>"rate the content", "submission"=>"submission"}}
+Completed   in 759975ms
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-14 16:07:15 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (4.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"it talks about a submission", "rubric"=>"rate the content", "submission"=>"submission", "metareviewgenerator"=>{"reviews"=>"it talks about a submission", "rubric"=>"rate the content", "submission"=>"submission"}}
+  [1m[35mPositiveWord Load (0.8ms)[0m  SELECT `positive_words`.* FROM `positive_words`
+  [1m[36mNegativeWord Load (0.8ms)[0m  [1mSELECT `negative_words`.* FROM `negative_words`[0m
+Completed 200 OK in 16729ms (Views: 0.3ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-14 16:07:59 -0400
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"it talks about a submission", "rubric"=>"rate the content", "submission"=>"submission", "metareviewgenerator"=>{"reviews"=>"it talks about a submission", "rubric"=>"rate the content", "submission"=>"submission"}}
+  [1m[35mPositiveWord Load (0.5ms)[0m  SELECT `positive_words`.* FROM `positive_words`
+  [1m[36mNegativeWord Load (0.5ms)[0m  [1mSELECT `negative_words`.* FROM `negative_words`[0m
+Completed 200 OK in 10699ms (Views: 0.2ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-14 16:21:35 -0400
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"it talks about a submission", "rubric"=>"rate the content", "submission"=>"submission", "metareviewgenerator"=>{"reviews"=>"it talks about a submission", "rubric"=>"rate the content", "submission"=>"submission"}}
+  [1m[35mPositiveWord Load (1.4ms)[0m  SELECT `positive_words`.* FROM `positive_words`
+  [1m[36mNegativeWord Load (0.6ms)[0m  [1mSELECT `negative_words`.* FROM `negative_words`[0m
+Completed 200 OK in 202068ms (Views: 0.4ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-14 16:25:20 -0400
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"it talks about a submission", "rubric"=>"rate the content", "submission"=>"submission", "metareviewgenerator"=>{"reviews"=>"it talks about a submission", "rubric"=>"rate the content", "submission"=>"submission"}}
+  [1m[35mPositiveWord Load (4.5ms)[0m  SELECT `positive_words`.* FROM `positive_words`
+  [1m[36mNegativeWord Load (0.4ms)[0m  [1mSELECT `negative_words`.* FROM `negative_words`[0m
+Completed 200 OK in 19408ms (Views: 0.1ms | ActiveRecord: 4.9ms)
+
+
+Started POST "/metareviewgenerator/create" for 127.0.0.1 at 2016-06-14 16:25:45 -0400
+Processing by MetareviewgeneratorController#create as HTML
+  Parameters: {"reviews"=>"it talks about a submission", "rubric"=>"rate the content", "submission"=>"submission", "metareviewgenerator"=>{"reviews"=>"it talks about a submission", "rubric"=>"rate the content", "submission"=>"submission"}}
+  [1m[35mPositiveWord Load (0.5ms)[0m  SELECT `positive_words`.* FROM `positive_words`
+  [1m[36mNegativeWord Load (52.5ms)[0m  [1mSELECT `negative_words`.* FROM `negative_words`[0m
+Completed 200 OK in 16820ms (Views: 0.2ms | ActiveRecord: 53.0ms)
+
+
+Started POST "/all" for 127.0.0.1 at 2016-09-06 10:31:00 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (57.6ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+
+ActionController::RoutingError (No route matches [POST] "/all"):
+  actionpack (4.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.5) lib/rails/engine.rb:514:in `call'
+  railties (4.1.5) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.1ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (25.6ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (228.1ms)
+
+
+Started POST "/metareviewgenerator/all" for 127.0.0.1 at 2016-09-06 10:33:19 -0500
+Processing by MetareviewgeneratorController#create as */*
+Completed 500 Internal Server Error in 111ms
+
+NoMethodError (undefined method `split' for nil:NilClass):
+  app/models/text_preprocessing.rb:215:in `block in check_correct_spellings'
+  app/models/text_preprocessing.rb:213:in `each'
+  app/models/text_preprocessing.rb:213:in `check_correct_spellings'
+  app/models/automated_metareview.rb:191:in `calculate_metareview_metrics'
+  app/controllers/metareviewgenerator_controller.rb:53:in `block in create'
+  app/controllers/metareviewgenerator_controller.rb:47:in `create'
+
+
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (128.9ms)
+
+
+Started POST "/metareviewgenerator/all" for 127.0.0.1 at 2016-09-06 10:37:27 -0500
+Processing by MetareviewgeneratorController#create as */*
+Completed 500 Internal Server Error in 38372ms
+
+NoMethodError (undefined method `split' for nil:NilClass):
+  app/models/text_preprocessing.rb:215:in `block in check_correct_spellings'
+  app/models/text_preprocessing.rb:213:in `each'
+  app/models/text_preprocessing.rb:213:in `check_correct_spellings'
+  app/models/automated_metareview.rb:191:in `calculate_metareview_metrics'
+  app/controllers/metareviewgenerator_controller.rb:53:in `block in create'
+  app/controllers/metareviewgenerator_controller.rb:47:in `create'
+
+
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.9ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.9ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.4ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (198.1ms)
+
+
+Started POST "/metareviewgenerator/all" for 127.0.0.1 at 2016-09-06 10:38:15 -0500
+Processing by MetareviewgeneratorController#create as */*
+Completed 500 Internal Server Error in 32729ms
+
+NoMethodError (undefined method `split' for nil:NilClass):
+  app/models/text_preprocessing.rb:215:in `block in check_correct_spellings'
+  app/models/text_preprocessing.rb:213:in `each'
+  app/models/text_preprocessing.rb:213:in `check_correct_spellings'
+  app/models/automated_metareview.rb:191:in `calculate_metareview_metrics'
+  app/controllers/metareviewgenerator_controller.rb:53:in `block in create'
+  app/controllers/metareviewgenerator_controller.rb:47:in `create'
+
+
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.2ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.9ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (134.2ms)
+
+
+Started POST "/metareviewgenerator/all" for 127.0.0.1 at 2016-09-06 10:38:56 -0500
+Processing by MetareviewgeneratorController#create as */*
+Completed 500 Internal Server Error in 39930ms
+
+NoMethodError (undefined method `split' for nil:NilClass):
+  app/models/text_preprocessing.rb:215:in `block in check_correct_spellings'
+  app/models/text_preprocessing.rb:213:in `each'
+  app/models/text_preprocessing.rb:213:in `check_correct_spellings'
+  app/models/automated_metareview.rb:191:in `calculate_metareview_metrics'
+  app/controllers/metareviewgenerator_controller.rb:53:in `block in create'
+  app/controllers/metareviewgenerator_controller.rb:47:in `create'
+
+
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.4ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.8ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.6ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (182.7ms)
+
+
+Started POST "/metareviewgenerator/all" for 127.0.0.1 at 2016-09-06 10:42:31 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (2.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by MetareviewgeneratorController#create as */*
+Completed 200 OK in 58ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/metareviewgenerator/all" for 127.0.0.1 at 2016-09-06 10:43:02 -0500
+Processing by MetareviewgeneratorController#create as */*
+Completed 200 OK in 6ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/metareviewgenerator/all" for 127.0.0.1 at 2016-09-06 10:43:18 -0500
+Processing by MetareviewgeneratorController#create as */*
+Completed 200 OK in 27191ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/metareviewgenerator/all" for 127.0.0.1 at 2016-09-06 10:43:55 -0500
+Processing by MetareviewgeneratorController#create as */*
+Completed 200 OK in 2242586ms (Views: 5.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/metareviewgenerator/all" for 127.0.0.1 at 2016-09-06 11:21:32 -0500
+Processing by MetareviewgeneratorController#create as */*
+Completed 200 OK in 219760ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/metareviewgenerator/all" for 127.0.0.1 at 2016-09-06 11:25:16 -0500
+Error occurred while parsing request parameters.
+Contents:
+
+{“reviews”:”Good work. I didn’t like the introduction of the article. This can be easily written in a better way. But the document provides very interesting and important information regarding the cloud.”}
+
+ActionDispatch::ParamsParser::ParseError (795: unexpected token at '{“reviews”:”Good work. I didn’t like the introduction of the article. This can be easily written in a better way. But the document provides very interesting and important information regarding the cloud.”}'):
+  actionpack (4.1.5) lib/action_dispatch/middleware/params_parser.rb:53:in `rescue in parse_formatted_parameters'
+  actionpack (4.1.5) lib/action_dispatch/middleware/params_parser.rb:32:in `parse_formatted_parameters'
+  actionpack (4.1.5) lib/action_dispatch/middleware/params_parser.rb:23:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.5) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.5) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.5) lib/rails/engine.rb:514:in `call'
+  railties (4.1.5) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.3ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.1ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.9ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (149.8ms)
+
+
+Started POST "/metareviewgenerator/all" for 127.0.0.1 at 2016-09-06 11:26:15 -0500
+Error occurred while parsing request parameters.
+Contents:
+
+{“reviews”:”Good work. I didn’t like the introduction of the article. This can be easily written in a better way. But the document provides very interesting and important information regarding the cloud.”}
+
+ActionDispatch::ParamsParser::ParseError (795: unexpected token at '{“reviews”:”Good work. I didn’t like the introduction of the article. This can be easily written in a better way. But the document provides very interesting and important information regarding the cloud.”}'):
+  actionpack (4.1.5) lib/action_dispatch/middleware/params_parser.rb:53:in `rescue in parse_formatted_parameters'
+  actionpack (4.1.5) lib/action_dispatch/middleware/params_parser.rb:32:in `parse_formatted_parameters'
+  actionpack (4.1.5) lib/action_dispatch/middleware/params_parser.rb:23:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.5) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.5) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.5) lib/rails/engine.rb:514:in `call'
+  railties (4.1.5) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.3ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.7ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (131.8ms)
+
+
+Started POST "/metareviewgenerator/all" for 127.0.0.1 at 2016-09-06 11:26:44 -0500
+Error occurred while parsing request parameters.
+Contents:
+
+{“reviews”:”Good work. I didn\’t like the introduction of the article. This can be easily written in a better way. But the document provides very interesting and important information regarding the cloud.”}
+
+ActionDispatch::ParamsParser::ParseError (795: unexpected token at '{“reviews”:”Good work. I didn\’t like the introduction of the article. This can be easily written in a better way. But the document provides very interesting and important information regarding the cloud.”}'):
+  actionpack (4.1.5) lib/action_dispatch/middleware/params_parser.rb:53:in `rescue in parse_formatted_parameters'
+  actionpack (4.1.5) lib/action_dispatch/middleware/params_parser.rb:32:in `parse_formatted_parameters'
+  actionpack (4.1.5) lib/action_dispatch/middleware/params_parser.rb:23:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.5) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.5) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.5) lib/rails/engine.rb:514:in `call'
+  railties (4.1.5) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.4ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.3ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.7ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (142.8ms)
+
+
+Started POST "/metareviewgenerator/all" for 127.0.0.1 at 2016-09-06 11:27:12 -0500
+Error occurred while parsing request parameters.
+Contents:
+
+{'reviews':'Good work. I didn\’t like the introduction of the article. This can be easily written in a better way. But the document provides very interesting and important information regarding the cloud.'}
+
+ActionDispatch::ParamsParser::ParseError (795: unexpected token at '{'reviews':'Good work. I didn\’t like the introduction of the article. This can be easily written in a better way. But the document provides very interesting and important information regarding the cloud.'}'):
+  actionpack (4.1.5) lib/action_dispatch/middleware/params_parser.rb:53:in `rescue in parse_formatted_parameters'
+  actionpack (4.1.5) lib/action_dispatch/middleware/params_parser.rb:32:in `parse_formatted_parameters'
+  actionpack (4.1.5) lib/action_dispatch/middleware/params_parser.rb:23:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.5) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.5) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.5) lib/rails/engine.rb:514:in `call'
+  railties (4.1.5) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.2ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (13.1ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.3ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (207.7ms)
+
+
+Started POST "/metareviewgenerator/all" for 127.0.0.1 at 2016-09-06 11:28:01 -0500
+Error occurred while parsing request parameters.
+Contents:
+
+{“reviews”:”Good work. I didn’t like the introduction of the article. This can be easily written in a better way. But the document provides very interesting and important information regarding the cloud.”}
+
+ActionDispatch::ParamsParser::ParseError (795: unexpected token at '{“reviews”:”Good work. I didn’t like the introduction of the article. This can be easily written in a better way. But the document provides very interesting and important information regarding the cloud.”}'):
+  actionpack (4.1.5) lib/action_dispatch/middleware/params_parser.rb:53:in `rescue in parse_formatted_parameters'
+  actionpack (4.1.5) lib/action_dispatch/middleware/params_parser.rb:32:in `parse_formatted_parameters'
+  actionpack (4.1.5) lib/action_dispatch/middleware/params_parser.rb:23:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.5) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.5) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.5) lib/rails/engine.rb:514:in `call'
+  railties (4.1.5) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.9ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.4ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (13.9ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (166.0ms)
+
+
+Started POST "/metareviewgenerator/all" for 127.0.0.1 at 2016-09-06 13:51:45 -0500
+Error occurred while parsing request parameters.
+Contents:
+
+{“reviews”:”Good work. I didn’t like the introduction of the article. This can be easily written in a better way. But the document provides very interesting and important information regarding the cloud.”}
+
+ActionDispatch::ParamsParser::ParseError (795: unexpected token at '{“reviews”:”Good work. I didn’t like the introduction of the article. This can be easily written in a better way. But the document provides very interesting and important information regarding the cloud.”}'):
+  actionpack (4.1.5) lib/action_dispatch/middleware/params_parser.rb:53:in `rescue in parse_formatted_parameters'
+  actionpack (4.1.5) lib/action_dispatch/middleware/params_parser.rb:32:in `parse_formatted_parameters'
+  actionpack (4.1.5) lib/action_dispatch/middleware/params_parser.rb:23:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.5) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.5) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.5) lib/rails/engine.rb:514:in `call'
+  railties (4.1.5) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.5ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.6ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.5ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (149.3ms)
+
+
+Started POST "/metareviewgenerator/all" for 127.0.0.1 at 2016-09-06 13:54:53 -0500
+Error occurred while parsing request parameters.
+Contents:
+
+'{“reviews”:”Good work. I didn’t like the introduction of the article. This can be easily written in a better way. But the document provides very interesting and important information regarding the cloud.”}'
+
+ActionDispatch::ParamsParser::ParseError (795: unexpected token at ''{“reviews”:”Good work. I didn’t like the introduction of the article. This can be easily written in a better way. But the document provides very interesting and important information regarding the cloud.”}''):
+  actionpack (4.1.5) lib/action_dispatch/middleware/params_parser.rb:53:in `rescue in parse_formatted_parameters'
+  actionpack (4.1.5) lib/action_dispatch/middleware/params_parser.rb:32:in `parse_formatted_parameters'
+  actionpack (4.1.5) lib/action_dispatch/middleware/params_parser.rb:23:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.5) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.5) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.5) lib/rails/engine.rb:514:in `call'
+  railties (4.1.5) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (14.2ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.4ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.5ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (163.1ms)
+
+
+Started POST "/metareviewgenerator/all" for 127.0.0.1 at 2016-09-06 13:57:43 -0500
+Error occurred while parsing request parameters.
+Contents:
+
+{“reviews”:”Good work. I didn’t like the introduction of the article. This can be easily written in a better way. But the document provides very interesting and important information regarding the cloud.”}
+
+ActionDispatch::ParamsParser::ParseError (795: unexpected token at '{“reviews”:”Good work. I didn’t like the introduction of the article. This can be easily written in a better way. But the document provides very interesting and important information regarding the cloud.”}'):
+  actionpack (4.1.5) lib/action_dispatch/middleware/params_parser.rb:53:in `rescue in parse_formatted_parameters'
+  actionpack (4.1.5) lib/action_dispatch/middleware/params_parser.rb:32:in `parse_formatted_parameters'
+  actionpack (4.1.5) lib/action_dispatch/middleware/params_parser.rb:23:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.5) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.5) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.5) lib/rails/engine.rb:514:in `call'
+  railties (4.1.5) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.8ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.3ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.2ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (138.9ms)
+
+
+Started POST "/metareviewgenerator/all" for 127.0.0.1 at 2016-09-06 14:04:00 -0500
+Processing by MetareviewgeneratorController#create as */*
+  Parameters: {"metareviewgenerator"=>{}}
+Completed 200 OK in 15608ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/metareviewgenerator/all" for 127.0.0.1 at 2016-09-06 14:04:33 -0500
+Error occurred while parsing request parameters.
+Contents:
+
+{“reviews”:”Good work. I didn’t like the introduction of the article. This can be easily written in a better way. But the document provides very interesting and important information regarding the cloud.”}
+
+ActionDispatch::ParamsParser::ParseError (795: unexpected token at '{“reviews”:”Good work. I didn’t like the introduction of the article. This can be easily written in a better way. But the document provides very interesting and important information regarding the cloud.”}'):
+  actionpack (4.1.5) lib/action_dispatch/middleware/params_parser.rb:53:in `rescue in parse_formatted_parameters'
+  actionpack (4.1.5) lib/action_dispatch/middleware/params_parser.rb:32:in `parse_formatted_parameters'
+  actionpack (4.1.5) lib/action_dispatch/middleware/params_parser.rb:23:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.5) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.5) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.5) lib/rails/engine.rb:514:in `call'
+  railties (4.1.5) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.7ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.6ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (144.7ms)
+
+
+Started POST "/metareviewgenerator/all" for 127.0.0.1 at 2016-09-06 14:04:51 -0500
+Processing by MetareviewgeneratorController#create as */*
+  Parameters: {"metareviewgenerator"=>{}}
+Completed 200 OK in 6839ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/metareviewgenerator/all" for 127.0.0.1 at 2016-09-06 14:05:47 -0500
+Error occurred while parsing request parameters.
+Contents:
+
+{reviews:”Good work. I didn’t like the introduction of the article. This can be easily written in a better way. But the document provides very interesting and important information regarding the cloud.”}
+
+ActionDispatch::ParamsParser::ParseError (795: unexpected token at '{reviews:”Good work. I didn’t like the introduction of the article. This can be easily written in a better way. But the document provides very interesting and important information regarding the cloud.”}'):
+  actionpack (4.1.5) lib/action_dispatch/middleware/params_parser.rb:53:in `rescue in parse_formatted_parameters'
+  actionpack (4.1.5) lib/action_dispatch/middleware/params_parser.rb:32:in `parse_formatted_parameters'
+  actionpack (4.1.5) lib/action_dispatch/middleware/params_parser.rb:23:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.5) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.5) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.5) lib/rails/engine.rb:514:in `call'
+  railties (4.1.5) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.4ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (138.7ms)
+
+
+Started POST "/metareviewgenerator/all" for 127.0.0.1 at 2016-09-06 14:06:02 -0500
+Error occurred while parsing request parameters.
+Contents:
+
+{reviews:''}
+
+ActionDispatch::ParamsParser::ParseError (795: unexpected token at '{reviews:''}'):
+  actionpack (4.1.5) lib/action_dispatch/middleware/params_parser.rb:53:in `rescue in parse_formatted_parameters'
+  actionpack (4.1.5) lib/action_dispatch/middleware/params_parser.rb:32:in `parse_formatted_parameters'
+  actionpack (4.1.5) lib/action_dispatch/middleware/params_parser.rb:23:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.5) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.5) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.5) lib/rails/engine.rb:514:in `call'
+  railties (4.1.5) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.5ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.8ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.7ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (147.2ms)
+
+
+Started POST "/metareviewgenerator/all" for 127.0.0.1 at 2016-09-06 14:06:21 -0500
+Error occurred while parsing request parameters.
+Contents:
+
+{reviews:'test'}
+
+ActionDispatch::ParamsParser::ParseError (795: unexpected token at '{reviews:'test'}'):
+  actionpack (4.1.5) lib/action_dispatch/middleware/params_parser.rb:53:in `rescue in parse_formatted_parameters'
+  actionpack (4.1.5) lib/action_dispatch/middleware/params_parser.rb:32:in `parse_formatted_parameters'
+  actionpack (4.1.5) lib/action_dispatch/middleware/params_parser.rb:23:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.5) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.5) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.5) lib/rails/engine.rb:514:in `call'
+  railties (4.1.5) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.8ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.3ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.1ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (134.6ms)
+
+
+Started POST "/metareviewgenerator/all" for 127.0.0.1 at 2016-09-06 14:06:36 -0500
+Error occurred while parsing request parameters.
+Contents:
+
+{'reviews':'test'}
+
+ActionDispatch::ParamsParser::ParseError (795: unexpected token at '{'reviews':'test'}'):
+  actionpack (4.1.5) lib/action_dispatch/middleware/params_parser.rb:53:in `rescue in parse_formatted_parameters'
+  actionpack (4.1.5) lib/action_dispatch/middleware/params_parser.rb:32:in `parse_formatted_parameters'
+  actionpack (4.1.5) lib/action_dispatch/middleware/params_parser.rb:23:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.5) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.5) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.5) lib/rails/engine.rb:514:in `call'
+  railties (4.1.5) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.0ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.6ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (130.3ms)
+
+
+Started POST "/metareviewgenerator/all" for 127.0.0.1 at 2016-09-06 14:07:02 -0500
+Processing by MetareviewgeneratorController#create as */*
+  Parameters: {"reviews"=>"test", "metareviewgenerator"=>{"reviews"=>"test"}}
+Completed 500 Internal Server Error in 18845ms
+
+NoMethodError (undefined method `length' for nil:NilClass):
+  app/models/cluster_generation.rb:75:in `rank_sentences'
+  app/models/cluster_generation.rb:26:in `generate_clusters'
+  app/models/review_coverage.rb:24:in `calculate_coverage'
+  app/models/automated_metareview.rb:305:in `calculate_metareview_metrics'
+  app/controllers/metareviewgenerator_controller.rb:53:in `block in create'
+  app/controllers/metareviewgenerator_controller.rb:47:in `create'
+
+
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.9ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.4ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.6ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (150.3ms)
+
+
+Started POST "/metareviewgenerator/all" for 127.0.0.1 at 2016-09-06 14:08:02 -0500
+Processing by MetareviewgeneratorController#create as */*
+  Parameters: {"reviews"=>"Good work. I didn’t like the introduction of the article. This can be easily written in a better way. But the document provides very interesting and important information regarding the cloud", "metareviewgenerator"=>{"reviews"=>"Good work. I didn’t like the introduction of the article. This can be easily written in a better way. But the document provides very interesting and important information regarding the cloud"}}
+Completed 500 Internal Server Error in 1078913ms
+
+NoMethodError (undefined method `length' for nil:NilClass):
+  app/models/cluster_generation.rb:75:in `rank_sentences'
+  app/models/cluster_generation.rb:26:in `generate_clusters'
+  app/models/review_coverage.rb:24:in `calculate_coverage'
+  app/models/automated_metareview.rb:305:in `calculate_metareview_metrics'
+  app/controllers/metareviewgenerator_controller.rb:53:in `block in create'
+  app/controllers/metareviewgenerator_controller.rb:47:in `create'
+
+
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (51.9ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (30.8ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (30.7ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (327891.2ms)
+
+
+Started POST "/all" for 127.0.0.1 at 2016-09-07 10:17:06 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (5.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+
+ActionController::RoutingError (No route matches [POST] "/all"):
+  actionpack (4.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.5) lib/rails/engine.rb:514:in `call'
+  railties (4.1.5) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.4ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (11.0ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (160.0ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (572.7ms)
+
+
+Started POST "/metareviewgenerator/all" for 127.0.0.1 at 2016-09-07 10:18:43 -0400
+Processing by MetareviewgeneratorController#create as */*
+  Parameters: {"submission"=>"something about cloud", "review"=>"discussion about the cloud should be elaborated more", "metareviewgenerator"=>{"submission"=>"something about cloud", "review"=>"discussion about the cloud should be elaborated more"}}
+Completed 200 OK in 63019ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/metareviewgenerator/all" for 127.0.0.1 at 2016-09-07 10:20:05 -0400
+Processing by MetareviewgeneratorController#create as */*
+  Parameters: {"submission"=>"something about cloud", "reviews"=>"discussion about the cloud should be elaborated more", "metareviewgenerator"=>{"submission"=>"something about cloud", "reviews"=>"discussion about the cloud should be elaborated more"}}
+  [1m[35mPositiveWord Load (1.0ms)[0m  SELECT `positive_words`.* FROM `positive_words`
+  [1m[36mNegativeWord Load (9.0ms)[0m  [1mSELECT `negative_words`.* FROM `negative_words`[0m
+Completed 200 OK in 22631ms (Views: 0.4ms | ActiveRecord: 9.9ms)
+
+
+Started POST "/metareviewgenerator/all" for 127.0.0.1 at 2016-09-07 10:41:43 -0400
+Processing by MetareviewgeneratorController#create as */*
+  Parameters: {"submission"=>"something about cloud", "reviews"=>"discussion about the cloud should be elaborated more", "metareviewgenerator"=>{"submission"=>"something about cloud", "reviews"=>"discussion about the cloud should be elaborated more"}}
+  [1m[35mPositiveWord Load (8.8ms)[0m  SELECT `positive_words`.* FROM `positive_words`
+  [1m[36mNegativeWord Load (1.2ms)[0m  [1mSELECT `negative_words`.* FROM `negative_words`[0m
+Completed 200 OK in 13241ms (Views: 0.6ms | ActiveRecord: 10.0ms)
+
+
+Started POST "/metareviewgenerator/all" for 127.0.0.1 at 2016-09-07 10:42:04 -0400
+Processing by MetareviewgeneratorController#create as */*
+  Parameters: {"submission"=>"something about cloud", "reviews"=>"discussion about the cloud should be elaborated more", "metareviewgenerator"=>{"submission"=>"something about cloud", "reviews"=>"discussion about the cloud should be elaborated more"}}
+  [1m[35mPositiveWord Load (0.5ms)[0m  SELECT `positive_words`.* FROM `positive_words`
+  [1m[36mNegativeWord Load (0.3ms)[0m  [1mSELECT `negative_words`.* FROM `negative_words`[0m
+Completed 200 OK in 77732ms (Views: 0.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-14 12:07:57 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (20.7ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/railties-4.1.5/lib/rails/templates/rails/welcome/index.html.erb (9.2ms)
+Completed 200 OK in 79ms (Views: 55.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/a" for 127.0.0.1 at 2016-09-14 12:08:06 -0400
+
+ActionController::RoutingError (No route matches [GET] "/a"):
+  actionpack (4.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.5) lib/rails/engine.rb:514:in `call'
+  railties (4.1.5) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (10.4ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (9.6ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (25.0ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (286.1ms)
+
+
+Started GET "/metareviewgenerator" for 127.0.0.1 at 2016-09-14 12:08:16 -0400
+
+ActionController::RoutingError (uninitialized constant MetareviewgeneratorsController):
+  activesupport (4.1.5) lib/active_support/inflector/methods.rb:238:in `const_get'
+  activesupport (4.1.5) lib/active_support/inflector/methods.rb:238:in `block in constantize'
+  activesupport (4.1.5) lib/active_support/inflector/methods.rb:236:in `each'
+  activesupport (4.1.5) lib/active_support/inflector/methods.rb:236:in `inject'
+  activesupport (4.1.5) lib/active_support/inflector/methods.rb:236:in `constantize'
+  actionpack (4.1.5) lib/action_dispatch/routing/route_set.rb:78:in `controller_reference'
+  actionpack (4.1.5) lib/action_dispatch/routing/route_set.rb:68:in `controller'
+  actionpack (4.1.5) lib/action_dispatch/routing/route_set.rb:46:in `call'
+  actionpack (4.1.5) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.1.5) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.5) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.5) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.5) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.5) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.5) lib/rails/engine.rb:514:in `call'
+  railties (4.1.5) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.3ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (14.3ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (4.2ms)
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (281.2ms)
+
+
+Started POST "/metareviewgenerator/tone" for 127.0.0.1 at 2016-09-14 12:10:12 -0400
+Processing by MetareviewgeneratorController#tone as JSON
+  [1m[35mPositiveWord Load (3.7ms)[0m  SELECT `positive_words`.* FROM `positive_words`
+  [1m[36mNegativeWord Load (3.6ms)[0m  [1mSELECT `negative_words`.* FROM `negative_words`[0m
+Completed 200 OK in 576ms (Views: 0.4ms | ActiveRecord: 7.2ms)
+
+
+Started POST "/metareviewgenerator/tone" for 127.0.0.1 at 2016-09-14 12:10:45 -0400
+Processing by MetareviewgeneratorController#tone as JSON
+  [1m[35mPositiveWord Load (0.5ms)[0m  SELECT `positive_words`.* FROM `positive_words`
+  [1m[36mNegativeWord Load (0.4ms)[0m  [1mSELECT `negative_words`.* FROM `negative_words`[0m
+Completed 200 OK in 560ms (Views: 0.3ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/metareviewgenerator/tone" for 127.0.0.1 at 2016-09-14 12:11:01 -0400
+Processing by MetareviewgeneratorController#tone as JSON
+  [1m[35mPositiveWord Load (0.4ms)[0m  SELECT `positive_words`.* FROM `positive_words`
+  [1m[36mNegativeWord Load (0.5ms)[0m  [1mSELECT `negative_words`.* FROM `negative_words`[0m
+Completed 200 OK in 666ms (Views: 0.3ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/metareviewgenerator/tone" for 127.0.0.1 at 2016-09-14 12:11:13 -0400
+Processing by MetareviewgeneratorController#tone as JSON
+  [1m[35mPositiveWord Load (0.7ms)[0m  SELECT `positive_words`.* FROM `positive_words`
+  [1m[36mNegativeWord Load (23.2ms)[0m  [1mSELECT `negative_words`.* FROM `negative_words`[0m
+Completed 200 OK in 657ms (Views: 0.5ms | ActiveRecord: 23.9ms)
+
+
+Started POST "/metareviewgenerator/tone" for 127.0.0.1 at 2016-09-14 12:34:14 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (3.5ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by MetareviewgeneratorController#tone as JSON
+  [1m[35mPositiveWord Load (5.2ms)[0m  SELECT `positive_words`.* FROM `positive_words`
+  [1m[36mNegativeWord Load (12.2ms)[0m  [1mSELECT `negative_words`.* FROM `negative_words`[0m
+Completed 200 OK in 2899ms (Views: 0.5ms | ActiveRecord: 25.4ms)
+
+
+Started POST "/metareviewgenerator/tone" for 127.0.0.1 at 2016-09-14 12:45:45 -0400
+Processing by MetareviewgeneratorController#tone as JSON
+  [1m[35mPositiveWord Load (17.6ms)[0m  SELECT `positive_words`.* FROM `positive_words`
+  [1m[36mNegativeWord Load (11.2ms)[0m  [1mSELECT `negative_words`.* FROM `negative_words`[0m
+Completed 200 OK in 32585ms (Views: 0.4ms | ActiveRecord: 28.8ms)
+
+
+Started POST "/metareviewgenerator/tone" for 127.0.0.1 at 2016-09-14 12:46:43 -0400
+Processing by MetareviewgeneratorController#tone as JSON
+  [1m[35mPositiveWord Load (19.7ms)[0m  SELECT `positive_words`.* FROM `positive_words`
+  [1m[36mNegativeWord Load (20.0ms)[0m  [1mSELECT `negative_words`.* FROM `negative_words`[0m
+Completed 200 OK in 41570ms (Views: 0.4ms | ActiveRecord: 39.7ms)
+
+
+Started POST "/metareviewgenerator/tone" for 127.0.0.1 at 2016-09-14 13:00:08 -0400
+Processing by MetareviewgeneratorController#tone as JSON
+  Parameters: {"reviews"=>"very good", "metareviewgenerator"=>{"reviews"=>"very good"}}
+  [1m[35mPositiveWord Load (13.9ms)[0m  SELECT `positive_words`.* FROM `positive_words`
+  [1m[36mNegativeWord Load (10.9ms)[0m  [1mSELECT `negative_words`.* FROM `negative_words`[0m
+Completed 200 OK in 14299ms (Views: 1.4ms | ActiveRecord: 24.9ms)
+
+
+Started POST "/metareviewgenerator/tone" for 127.0.0.1 at 2016-09-14 13:00:27 -0400
+Processing by MetareviewgeneratorController#tone as JSON
+  Parameters: {"reviews"=>"very good", "metareviewgenerator"=>{"reviews"=>"very good"}}
+  [1m[35mPositiveWord Load (6.0ms)[0m  SELECT `positive_words`.* FROM `positive_words`
+  [1m[36mNegativeWord Load (18.1ms)[0m  [1mSELECT `negative_words`.* FROM `negative_words`[0m
+Completed 200 OK in 295326ms (Views: 9.9ms | ActiveRecord: 24.1ms)
+
+
+Started POST "/metareviewgenerator/tone" for 127.0.0.1 at 2016-09-14 13:05:35 -0400
+Processing by MetareviewgeneratorController#tone as JSON
+  Parameters: {"reviews"=>"very good", "metareviewgenerator"=>{"reviews"=>"very good"}}
+  [1m[35mPositiveWord Load (39.3ms)[0m  SELECT `positive_words`.* FROM `positive_words`
+  [1m[36mNegativeWord Load (56.5ms)[0m  [1mSELECT `negative_words`.* FROM `negative_words`[0m
+Completed 200 OK in 17984353ms (Views: 3.2ms | ActiveRecord: 95.8ms)
+
+
+Started POST "/metareviewgenerator/tone" for 127.0.0.1 at 2016-09-14 18:05:20 -0400
+Processing by MetareviewgeneratorController#tone as JSON
+  Parameters: {"reviews"=>"very good", "metareviewgenerator"=>{"reviews"=>"very good"}}
+  [1m[35mPositiveWord Load (8.2ms)[0m  SELECT `positive_words`.* FROM `positive_words`
+  [1m[36mNegativeWord Load (13.1ms)[0m  [1mSELECT `negative_words`.* FROM `negative_words`[0m
+Completed 200 OK in 123058ms (Views: 0.8ms | ActiveRecord: 21.3ms)
+
+
+Started POST "/metareviewgenerator/tone" for 127.0.0.1 at 2016-09-14 18:07:35 -0400
+Processing by MetareviewgeneratorController#tone as JSON
+  Parameters: {"reviews"=>"very good", "metareviewgenerator"=>{"reviews"=>"very good"}}
+  [1m[35mPositiveWord Load (6.1ms)[0m  SELECT `positive_words`.* FROM `positive_words`
+  [1m[36mNegativeWord Load (11.6ms)[0m  [1mSELECT `negative_words`.* FROM `negative_words`[0m
+Completed 200 OK in 60832ms (Views: 0.6ms | ActiveRecord: 17.8ms)
+
+
+Started POST "/metareviewgenerator/tone" for 127.0.0.1 at 2016-09-14 18:08:39 -0400
+Processing by MetareviewgeneratorController#tone as JSON
+  Parameters: {"reviews"=>"very good", "metareviewgenerator"=>{"reviews"=>"very good"}}
+  [1m[35mPositiveWord Load (15.4ms)[0m  SELECT `positive_words`.* FROM `positive_words`
+  [1m[36mNegativeWord Load (13.5ms)[0m  [1mSELECT `negative_words`.* FROM `negative_words`[0m
+Completed 200 OK in 311782ms (Views: 2.1ms | ActiveRecord: 28.9ms)
+
+
+Started POST "/metareviewgenerator/tone" for 127.0.0.1 at 2016-09-14 18:14:13 -0400
+Processing by MetareviewgeneratorController#tone as JSON
+  Parameters: {"reviews"=>"the structure is very good", "metareviewgenerator"=>{"reviews"=>"the structure is very good"}}
+  [1m[35mPositiveWord Load (18.1ms)[0m  SELECT `positive_words`.* FROM `positive_words`
+  [1m[36mNegativeWord Load (17.3ms)[0m  [1mSELECT `negative_words`.* FROM `negative_words`[0m
+Completed 200 OK in 155024ms (Views: 0.9ms | ActiveRecord: 35.4ms)
+
+
+Started GET "/" for 222.41.115.61 at 2016-09-16 01:59:04 -0400
+Processing by Rails::WelcomeController#index as */*
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/railties-4.1.5/lib/rails/templates/rails/welcome/index.html.erb (79.4ms)
+Completed 200 OK in 390ms (Views: 353.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-16 16:23:08 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/railties-4.1.5/lib/rails/templates/rails/welcome/index.html.erb (310.1ms)
+Completed 200 OK in 1299ms (Views: 931.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/metareviewgenerator/tone" for 127.0.0.1 at 2016-09-16 17:27:33 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by MetareviewgeneratorController#tone as JSON
+  Parameters: {"reviews"=>"the structure is very good", "metareviewgenerator"=>{"reviews"=>"the structure is very good"}}
+  [1m[35mPositiveWord Load (8.0ms)[0m  SELECT `positive_words`.* FROM `positive_words`
+  [1m[36mNegativeWord Load (11.6ms)[0m  [1mSELECT `negative_words`.* FROM `negative_words`[0m
+Completed 200 OK in 296066ms (Views: 0.7ms | ActiveRecord: 23.9ms)
+
+
+Started POST "/metareviewgenerator/tone" for 127.0.0.1 at 2016-09-16 17:41:19 -0400
+Processing by MetareviewgeneratorController#tone as JSON
+  Parameters: {"reviews"=>"good", "metareviewgenerator"=>{"reviews"=>"good"}}
+  [1m[35mPositiveWord Load (11.2ms)[0m  SELECT `positive_words`.* FROM `positive_words`
+  [1m[36mNegativeWord Load (13.5ms)[0m  [1mSELECT `negative_words`.* FROM `negative_words`[0m
+Completed 200 OK in 7624ms (Views: 0.5ms | ActiveRecord: 24.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-10-03 10:20:38 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (11.5ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/railties-4.1.5/lib/rails/templates/rails/welcome/index.html.erb (6.7ms)
+Completed 200 OK in 67ms (Views: 48.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-21 14:23:02 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (24.5ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/ferry/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/railties-4.1.5/lib/rails/templates/rails/welcome/index.html.erb (3.9ms)
+Completed 200 OK in 57ms (Views: 24.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/metareviewgenerator/volume" for 127.0.0.1 at 2017-07-21 14:31:32 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (11.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by MetareviewgeneratorController#volume as JSON
+  Parameters: {"review"=>"test review", "metareviewgenerator"=>{"review"=>"test review"}}
+Completed 200 OK in 40ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/metareviewgenerator/volume" for 127.0.0.1 at 2017-07-21 14:31:42 -0400
+Processing by MetareviewgeneratorController#volume as JSON
+  Parameters: {"review"=>"test review test", "metareviewgenerator"=>{"review"=>"test review test"}}
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/metareviewgenerator/volume" for 127.0.0.1 at 2017-07-21 14:31:45 -0400
+Processing by MetareviewgeneratorController#volume as JSON
+  Parameters: {"review"=>"test review test2", "metareviewgenerator"=>{"review"=>"test review test2"}}
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 0.0ms)

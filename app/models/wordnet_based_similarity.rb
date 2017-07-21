@@ -245,8 +245,6 @@ def get_relations_for_review_submission_tokens(token, stem, pos)
         def_arr << nil
       end
 
-      beginning_time = Time.now
-
       #looking for all relations synonym, hypernym, hyponym etc. from among this synset
       #synonyms
       begin #error handling for lemmas's without synsets that throw errors! (likely due to the dictionary file we are using)
@@ -311,10 +309,6 @@ def get_relations_for_review_submission_tokens(token, stem, pos)
       rescue
         anto_arr << nil
       end
-
-      end_time = Time.now
-      diff_time = end_time - beginning_time
-      puts "*************  query wordnet for syn, hyper, hypo, ant of #{lemma_synset} - duration #{diff_time}"
 
     end #end of the for loop for g  
   end #end of checking if the lemma is nil or empty
